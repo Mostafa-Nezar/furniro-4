@@ -47,7 +47,7 @@ function createproduct(productsshow, arr) {
                     </div>
                 </div>
             </div>`;
-            if (location.pathname == "/furniro-2/index.html") {
+            if (location.pathname == "/furniro-4/index.html") {
                 product.innerHTML = `
                 <div class="cont">
                     <div class="innercontent">

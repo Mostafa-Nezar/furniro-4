@@ -1,7 +1,7 @@
 setTimeout(() => {
   document.querySelectorAll(".innercontent img").forEach((e)=>e.style.height="316.85px")
   document.querySelectorAll(".sth").forEach((e)=>e.style.height="63.5833px")
-  if (location.pathname == "/furniro-2/cart/cart.html") {
+  if (location.pathname == "/furniro-4/cart/cart.html") {
     document.querySelectorAll(".sth").forEach((e)=>e.style.height="74px")
   }
 }, 500);
@@ -12,7 +12,7 @@ document.addEventListener("click", (e) => {
     document.querySelectorAll(".sth").forEach((ee)=>{
       ee.style.height="63.5833px"
     })
-    if (location.pathname == "/furniro-2/cart/cart.html") {
+    if (location.pathname == "/furniro-4/cart/cart.html") {
       document.querySelectorAll(".sth").forEach((ee)=>{
               ee.style.height="74px"
         })
@@ -34,7 +34,7 @@ let scrollToTopBtn = document.getElementById("scrollToTopBtn");
       document.documentElement.scrollTop = 0;
   };
 
-  if ((location.pathname == "/furniro-2/details/detail.html")) {
+  if ((location.pathname == "/furniro-4/details/detail.html")) {
     document.addEventListener("DOMContentLoaded", () => {
       const projectLink = encodeURIComponent(window.location.href);
       const projectTitle = encodeURIComponent("Check out this project!");
@@ -163,7 +163,7 @@ document.querySelectorAll(".icon-cart").forEach(e => {
     };
   });
 
-if (location.pathname != "/furniro-2/checkout.html") {
+if (location.pathname != "/furniro-4/checkout.html") {
   document.querySelectorAll("*").forEach((e)=>{
     e.addEventListener("click",(ee)=>{    
     if ((!ee.target.parentElement.parentElement.classList.contains("icon-cart")) && (document.querySelector("#listcardparent").classList.contains("disp")) && !ee.target.classList.contains("dont")) {
@@ -182,7 +182,7 @@ if (location.pathname != "/furniro-2/checkout.html") {
     document.body.classList.add('no-transition');
   });
 
-  if ((location.pathname == "/furniro-2/index.html") || (location.pathname == "/furniro-2/details/detail.html") || (location.pathname == "/furniro-2/shop/shop.html")) {
+  if ((location.pathname == "/furniro-4/index.html") || (location.pathname == "/furniro-4/details/detail.html") || (location.pathname == "/furniro-4/shop/shop.html")) {
     setTimeout(() => {
       document.querySelectorAll(".sharep").forEach((e)=>{
         e.addEventListener("click",(ee)=>{
