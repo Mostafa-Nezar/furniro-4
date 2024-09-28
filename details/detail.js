@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".four img").src="../" + product.image4
             document.querySelector(".comp").style.cursor=`pointer`
             document.querySelector(".comp").addEventListener("click",() =>{
-                location.assign(`/furniro-4/compare/compare.html?id=${productId}`)
+                location.assign(`/compare/compare.html?id=${productId}`)
                 }) 
             const savedRating = localStorage.getItem(`rate${product.id}`)
             if (savedRating) {
