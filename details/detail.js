@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 views = 1;
             }
             if (rateviews) {
-                rateviews = parseInt(rateviews) + 2;
+                rateviews = parseInt(rateviews) + 1;
             } else {
                 rateviews = 1;
             }
