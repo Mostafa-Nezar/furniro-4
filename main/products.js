@@ -3,8 +3,7 @@ fetch('../main/productlist.json')
     .then(products => {
     localStorage.setItem("myarr",JSON.stringify(products[0]))        
     })
-    
-let myproducts = JSON.parse(localStorage.getItem("myarr"));
+let myproducts = JSON.parse(localStorage.getItem("myarrlike") || localStorage.getItem("myarr"))
 function createproduct(productsshow, arr) {
     arr.forEach(e => {
         const [saleLabel, isLiked , likeClass ] = [e.new ? `<div class="sale new">${e.new}</div>` : e.sale ? `<div class="sale">-${e.sale}%</div>` : `<div class="sale"></div>`, e.liked ? 'currentColor' : 'none' , e.liked ? 'red' : '' ];
@@ -82,18 +81,26 @@ function createproduct(productsshow, arr) {
         productsshow.appendChild(product);
     });
 }
-let likeitem = () => {
-   setTimeout(() => {
+let likeitem = (productsshow, arr) => {
+    productsshow.innerHTML = null;
+    createproduct(productsshow, arr); 
     let likeitems = document.querySelectorAll(".likex");
     likeitems.forEach((e) => {
         e.addEventListener("click", (ee) => {
             ee.preventDefault();
-            let myproduct = JSON.parse(localStorage.getItem("myarr")).find(p => p.id == e.dataset.id); 
-            myproduct.liked = !myproduct.liked;
-            e.classList[myproduct.liked ? 'add' : 'remove']("red");
-            e.firstElementChild.firstElementChild.setAttribute("fill", myproduct.liked ? "currentColor" : "none");            
-        }); 
+            let myproduct = arr.find(p => p.id == e.dataset.id); 
+            if (myproduct) {
+                myproduct.liked = !myproduct.liked;
+                localStorage.setItem("myarrlike", JSON.stringify(arr));
+                if (myproduct.liked) {
+                    e.classList.add("red");
+                    e.firstElementChild.firstElementChild.setAttribute("fill", "currentColor");
+                } else {
+                    e.classList.remove("red");
+                    e.firstElementChild.firstElementChild.setAttribute("fill", "none");
+                }
+            }
+        });
     });
-   }, 1000);
 }
 export{createproduct,likeitem,myproducts}

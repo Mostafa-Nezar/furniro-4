@@ -1,13 +1,12 @@
-import { createproduct, likeitem,myproducts } from "../main/products.js";
+import { createproduct} from "../main/products.js";
+let myproducts = JSON.parse(localStorage.getItem("myarrlike") || localStorage.getItem("myarr"))
 const [arr3 , arr2] = [myproducts.slice(32) , myproducts.slice(16, -16)] 
 let[filteredArrays, [filteredArr, filteredArr2, filteredArr3]] = [[myproducts, arr2, arr3],[myproducts, arr2, arr3]];
 myproducts.length = 16;
 const productContainers = document.querySelectorAll(".productjs");
 let crarr = (x, y, z) => {
     const values = [x, y, z];
-    productContainers.forEach((e, index) => {  createproduct(e, values[index % values.length]);});
-    likeitem(); 
-  } 
+    productContainers.forEach((e, index) => {createproduct(e, values[index % values.length]);})} 
 crarr(myproducts,arr2,arr3)
 const toggleDropdown = (selector) => {
     document.querySelector(selector).classList.toggle("d-none");
@@ -23,8 +22,7 @@ document.addEventListener("click", (e) => {
     if (!target.classList.contains("myfilter")) {
         document.querySelector(".mydivlist").classList.add("d-none");
         document.querySelector(".myullet").classList.add("d-none");
-    }
-});
+    }});
 const resetProducts = () => {
     productContainers.forEach(container => (container.innerHTML = null));
     crarr(myproducts,arr2,arr3);
@@ -57,9 +55,7 @@ const setupFilters = (selector, callback) => {
         li.addEventListener("click", function () {
             document.querySelectorAll(selector).forEach((e) => e.classList.remove("active"));
             li.classList.add("active");
-            callback();
-        });
-    });
+            callback()})})
 };
 setupFilters(".myul li", filterAndSort);
 setupFilters(".myullet li", filterAndSort);
@@ -67,7 +63,5 @@ document.querySelector(".myownfilter").addEventListener("click", resetProducts);
 setTimeout(() => {
     document.addEventListener("click", () => {
         const count = document.querySelectorAll(".cont").length;
-        document.querySelector(".show span").innerHTML = count;
-        document.querySelector(".myshow").innerHTML = count;
-    });
-}, 0);
+        [document.querySelector(".myshow").innerHTML, document.querySelector(".show span").innerHTML] = [count, count];
+    })}, 0)
