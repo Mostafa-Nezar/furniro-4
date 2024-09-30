@@ -23,17 +23,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             })
             if (views) {
-                views = parseInt(views) + 1;
+                views = parseInt(views) + 2;
             } else {
                 views = 1;
             }
             if (rateviews) {
-                rateviews = parseInt(rateviews) + 1;
+                rateviews = parseInt(rateviews) + 2;
             } else {
                 rateviews = 1;
             }
+            window.onload = () =>{
+                rateviews--;  
+                localStorage.setItem(keyrateviews, rateviews);
+            }
             stars.forEach((e) => {
-                e.addEventListener("click", (ee) => {
+                e.addEventListener("click", () => {
                         rateviews++;  
                         localStorage.setItem(keyrateviews, rateviews);
                         localStorage.setItem("click","yes");
@@ -80,9 +84,9 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".three img").src="../" + product.image3
             document.querySelector(".four img").src="../" + product.image4
             document.querySelector(".comp").style.cursor=`pointer`
-            document.querySelector(".comp").addEventListener("click",() =>{
-                location.assign(`/furniro-4/compare/compare.html?id=${productId}`)
-                }) 
+            document.querySelector(".comp").onclick = () =>{
+            location.assign(`/furniro-4/compare/compare.html?id=${productId}`)
+            }
             const savedRating = localStorage.getItem(`rate${product.id}`)
             if (savedRating) {
                 ratingValue.textContent = savedRating;
@@ -165,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (cartItem) {
             cartItem.quantity += change;
             if (cartItem.quantity < 0) {
-                cart = cart.filter(p => p.productid != productId);
+                cart = cart.filter(p => p.productid != productId); // Remove item if quantity is 0 or less
             }
         } else if (change > 0) {
             cart.push({ productid: productId, quantity: 1 });
