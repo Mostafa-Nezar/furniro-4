@@ -69,7 +69,12 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".comp").style.cursor=`pointer`
             document.querySelector(".comp").onclick = () =>{
             setTimeout(() => {
+                setTimeout(() => {
+                   console.log("hello");
+                }, 250);
+                setTimeout(() => {
                 location.assign(`/furniro-4/compare/compare.html?id=${productId}`)        
+                }, 500);
             }, 250);
             }
             const savedRating = localStorage.getItem(`rate${product.id}`)
