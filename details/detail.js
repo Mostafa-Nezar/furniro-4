@@ -66,17 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".two img").src="../" + product.image2
             document.querySelector(".three img").src="../" + product.image3
             document.querySelector(".four img").src="../" + product.image4
-            document.querySelector(".comp").style.cursor=`pointer`
-            document.querySelector(".comp").onclick = () =>{
-            setTimeout(() => {
-                setTimeout(() => {
-                   console.log("hello");
-                }, 250);
-                setTimeout(() => {
-                location.assign(`/furniro-4/compare/compare.html?id=${productId}`)        
-                }, 500);
-            }, 250);
-            }
+            document.querySelector(".comp").setAttribute("href",`/furniro-4/compare/compare.html?id=${productId}`)
             const savedRating = localStorage.getItem(`rate${product.id}`)
             if (savedRating) {
                 ratingValue.textContent = savedRating;

@@ -32,7 +32,7 @@ document.getElementById("product-imagee").src ="../" + myobj2.imagetwo;
 document.getElementById("product-imagee").style.height='177px';
 document.querySelector(".name2").innerHTML=myobj2.name
 document.querySelector(".price2").innerHTML=`Rs ${myobj2.price},000.00`
-document.querySelector(".dagain2").href=`/details/detail.html?id=${myobj2.id}`
+document.querySelector(".dagain2").href=`/furniro-4/details/detail.html?id=${myobj2.id}`
 document.querySelector(".addcopm2").setAttribute("data-id",myobj2.id)
 const mydata = [
     myobj2.general.salespackage,
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.getElementById("product-imagee").style.height='177px';
                 document.querySelector(".name2").innerHTML=product2.name
                 document.querySelector(".price2").innerHTML=`Rs ${product2.price},000.00`
-                document.querySelector(".dagain2").href=`/details/detail.html?id=${productId2}`
+                document.querySelector(".dagain2").href=`/furniro-4/details/detail.html?id=${productId2}`
                 document.querySelector(".addcopm2").setAttribute("data-id",product2.id)
                 if (product2) {
                     const data2 = [
