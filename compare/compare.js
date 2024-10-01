@@ -23,7 +23,7 @@ reviews =  reviews.reduce((e,a,)=>e+a,0)
 if (JSON.parse(localStorage.getItem(`page_rate_view_count_${myobj2.id}`))) {
 finalrate2 = (reviews / JSON.parse(localStorage.getItem(`page_rate_view_count_${myobj2.id}`))).toFixed(1)
 }
-myrate2.innerHTML = finalrate2
+myrate2.innerHTML = finalrate2 /2
 vv.forEach((path, index) => {
     path.style.color = index < +finalrate2 ? "#FFC700" : "lightgray";
 });
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         vv.forEach((path, index) => {
                             path.style.color = index < +finalrate2 ? "#FFC700" : "lightgray";
                         });
-                        myrate2.innerHTML = finalrate2
+                        myrate2.innerHTML = finalrate2 / 2
                         localStorage.setItem("myarr", JSON.stringify(products));
                     } else {
                         ratingValue2.textContent = 0;
@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 vv.forEach((path, index) => {
                     path.style.color = index < +finalrate ? "#FFC700" : "lightgray";
                 });
-             myrate.innerHTML = finalrate
+             myrate.innerHTML = finalrate / 2
             const savedRating = localStorage.getItem(`rate${product.id}`);
             if (savedRating) {
                 ratingValue.textContent = savedRating;
