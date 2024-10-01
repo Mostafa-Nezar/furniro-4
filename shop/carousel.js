@@ -2,6 +2,7 @@ import { createproduct} from "../main/products.js";
 let myproducts = JSON.parse(localStorage.getItem("myarrlike") || localStorage.getItem("myarr"))
 const [arr3 , arr2] = [myproducts.slice(32) , myproducts.slice(16, -16)] 
 let[filteredArrays, [filteredArr, filteredArr2, filteredArr3]] = [[myproducts, arr2, arr3],[myproducts, arr2, arr3]];
+
 myproducts.length = 16;
 const productContainers = document.querySelectorAll(".productjs");
 let crarr = (x, y, z) => {

@@ -81,17 +81,17 @@ function createproduct(productsshow, arr) {
         productsshow.appendChild(product);
     });
 }
-let likeitem = (productsshow, arr) => {
+let likeitem = (productsshow, limitedArr, fullArr) => {
     productsshow.innerHTML = null;
-    createproduct(productsshow, arr); 
+    createproduct(productsshow, limitedArr); 
     let likeitems = document.querySelectorAll(".likex");
     likeitems.forEach((e) => {
         e.addEventListener("click", (ee) => {
             ee.preventDefault();
-            let myproduct = arr.find(p => p.id == e.dataset.id); 
+            let myproduct = fullArr.find(p => p.id == e.dataset.id); 
             if (myproduct) {
                 myproduct.liked = !myproduct.liked;
-                localStorage.setItem("myarrlike", JSON.stringify(arr));
+                localStorage.setItem("myarrlike", JSON.stringify(fullArr));
                 if (myproduct.liked) {
                     e.classList.add("red");
                     e.firstElementChild.firstElementChild.setAttribute("fill", "currentColor");
@@ -103,4 +103,5 @@ let likeitem = (productsshow, arr) => {
         });
     });
 }
+
 export{createproduct,likeitem,myproducts}

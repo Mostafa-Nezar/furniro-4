@@ -69,9 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".comp").style.cursor=`pointer`
             document.querySelector(".comp").onclick = () =>{
             setTimeout(() => {
-                alert("x")
                 location.assign(`/furniro-4/compare/compare.html?id=${productId}`)        
-            }, 1000);
+            }, 250);
             }
             const savedRating = localStorage.getItem(`rate${product.id}`)
             if (savedRating) {
