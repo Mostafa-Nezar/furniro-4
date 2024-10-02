@@ -13,25 +13,18 @@ document.addEventListener("DOMContentLoaded", () => {
             const keyrateviews = `page_rate_view_count_${product.id}`;
             let views = localStorage.getItem(keyviews);
             let rateviews = localStorage.getItem(keyrateviews);
-            stars.forEach((e)=>{
-                e.addEventListener("click",()=>{
-                    localStorage.setItem("hi","yes")         
-                })
-            })
-            document.querySelector(".comp").addEventListener("click",()=>{
-                if (localStorage.getItem("click") == "yes") {
-                }
-            })
             if (views) {
                 views = parseInt(views) + 1;
             } else {
                 views = 1;
             }
+            localStorage.setItem(keyviews, views); 
             if (rateviews) {
                 rateviews = parseInt(rateviews) + 1;
             } else {
                 rateviews = 1;
             }
+            localStorage.setItem(keyrateviews, rateviews); 
             window.onload = () =>{
                 rateviews--;  
                 localStorage.setItem(keyrateviews, rateviews);
@@ -53,11 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         e.addEventListener("click", () => {
                             if (!hasBeenCalled && rateviews > 0) {
                                 rateviews++; 
-                                console.log(rateviews ,"flag condition what not working ??");
                                 localStorage.setItem(keyrateviews, rateviews);
                                 hasBeenCalled = true; 
-                            } else {
-                                console.log("Rateviews update can only be called once.");
                             }
                         });
                     });
@@ -83,9 +73,8 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".two img").src="../" + product.image2
             document.querySelector(".three img").src="../" + product.image3
             document.querySelector(".four img").src="../" + product.image4
-            document.querySelector(".comp").style.cursor=`pointer`
             document.querySelector(".comp").onclick = () =>{
-            location.assign(`/furniro-4/compare/compare.html?id=${productId}`)
+            location.assign(`/compare/compare.html?id=${productId}`)
             }
             const savedRating = localStorage.getItem(`rate${product.id}`)
             if (savedRating) {
@@ -179,10 +168,8 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCartQuantity(productId);
     }
 });
-
     document.querySelectorAll(".ph").forEach((e)=>{
         e.addEventListener("click",(ee)=>{
             document.querySelector("#product-image").src="../" + ee.target.getAttribute("src")
         })
     })
-localStorage.setItem("click","no")
