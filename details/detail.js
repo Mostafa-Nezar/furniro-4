@@ -1,4 +1,4 @@
-import {createproduct,myproducts} from "../main/products.js";
+import {createproduct,likeitem ,myproducts} from "../main/products.js";
 console.log(myproducts);
 const stars = document.querySelectorAll('.stars input');
 const ratingValue = document.getElementById('rating-value');
@@ -13,6 +13,15 @@ document.addEventListener("DOMContentLoaded", () => {
             const keyrateviews = `page_rate_view_count_${product.id}`;
             let views = localStorage.getItem(keyviews);
             let rateviews = localStorage.getItem(keyrateviews);
+            stars.forEach((e)=>{
+                e.addEventListener("click",()=>{
+                    localStorage.setItem("hi","yes")         
+                })
+            })
+            document.querySelector(".comp").addEventListener("click",()=>{
+                if (localStorage.getItem("click") == "yes") {
+                }
+            })
             if (views) {
                 views = parseInt(views) + 1;
             } else {
@@ -30,7 +39,11 @@ document.addEventListener("DOMContentLoaded", () => {
             stars.forEach((e) => {
                 e.addEventListener("click", (ee) => {
                         rateviews++;  
-                        localStorage.setItem(keyrateviews, rateviews);     
+                        localStorage.setItem(keyrateviews, rateviews);
+                        localStorage.setItem("click","yes");
+                        if (localStorage.getItem("click")==="yes") {
+                            rateviews--
+                        }       
                 });
             });   
             function createRateviewsOnceFunction(stars, keyrateviews, rateviews) {
@@ -40,8 +53,12 @@ document.addEventListener("DOMContentLoaded", () => {
                         e.addEventListener("click", () => {
                             if (!hasBeenCalled && rateviews > 0) {
                                 rateviews++; 
+                                console.log(rateviews ,"flag condition what not working ??");
                                 localStorage.setItem(keyrateviews, rateviews);
-                                hasBeenCalled = true; }
+                                hasBeenCalled = true; 
+                            } else {
+                                console.log("Rateviews update can only be called once.");
+                            }
                         });
                     });
                 };
@@ -66,21 +83,22 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".two img").src="../" + product.image2
             document.querySelector(".three img").src="../" + product.image3
             document.querySelector(".four img").src="../" + product.image4
-            document.querySelector(".comp").setAttribute("href",`/furniro-4/compare/compare.html?id=${productId}`)
-            document.querySelector(".comp").addEventListener("click", (e) =>{
-                e.preventDefault();
-                location.reload();
-                setTimeout(()=> {
-                    window.location.href = `/furniro-4/compare/compare.html?id=${productId}`;
-                }, 10);
-            });
+            document.querySelector(".comp").style.cursor=`pointer`
+            document.querySelector(".comp").onclick = () =>{
+            location.assign(`/furniro-4/compare/compare.html?id=${productId}`)
+            }
             const savedRating = localStorage.getItem(`rate${product.id}`)
             if (savedRating) {
                 ratingValue.textContent = savedRating;
                 vtwo.textContent = " " +  savedRating + " ";
                 product.rate = savedRating                
                 stars.forEach(star => {
-                    if (star.value === savedRating) {star.checked = true}})}
+                    if (star.value === savedRating) {
+                        star.checked = true;
+                    }
+                });
+            }
+
             let lastSelectedRating = null;
             window.addEventListener('beforeunload', function() {
                 if (lastSelectedRating !== null) {
@@ -97,48 +115,74 @@ document.addEventListener("DOMContentLoaded", () => {
                     vtwo.textContent = " " + lastSelectedRating + " ";
                 });
             });
+            
             document.getElementById("add-to-cart").onclick = () => {
                 let cart = JSON.parse(localStorage.getItem("cart")) || [];
                 let existingProduct = cart.find(p => p.productid == product.id);
+
                 if (existingProduct) {
                     existingProduct.quantity += 1;
                 } else {
                     cart.push({ productid: product.id, quantity: 1 });
                 }
+
                 localStorage.setItem("cart", JSON.stringify(cart));
                 updateCartQuantity(product.id);
-                location.reload()}}}
+                location.reload()
+            };
+        }
+    }
+
     if (productId <= 4) {
         myproducts.length = 5;
     }
+    
     let listproduct = document.querySelector(".similar .row");
     myproducts.length = 8;
     createproduct(listproduct,myproducts.filter((e) => e.id != productId))
+
+    likeitem();
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     let cartItem = cart.find(p => p.productid == productId);
+
     if (cartItem) {
         document.querySelector(".q").textContent = cartItem.quantity;
     }
     function updateCartQuantity(productId) {
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
         let cartItem = cart.find(p => p.productid == productId);
+
         if (cartItem) {
-            document.querySelector(".q").textContent = cartItem.quantity;}}
-    document.querySelector(".plus").addEventListener("click", () => {updateProductQuantity(productId, 1)})
-    document.querySelector(".minus").addEventListener("click", () => {updateProductQuantity(productId, -1)})
+            document.querySelector(".q").textContent = cartItem.quantity;
+        }
+    }
+    document.querySelector(".plus").addEventListener("click", () => {
+        updateProductQuantity(productId, 1);
+    });
+    document.querySelector(".minus").addEventListener("click", () => {
+        updateProductQuantity(productId, -1);
+    });
     function updateProductQuantity(productId, change) {
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
         let cartItem = cart.find(p => p.productid == productId);
+
         if (cartItem) {
             cartItem.quantity += change;
             if (cartItem.quantity < 0) {
-                cart = cart.filter(p => p.productid != productId); 
+                cart = cart.filter(p => p.productid != productId);
             }
         } else if (change > 0) {
             cart.push({ productid: productId, quantity: 1 });
         }
+
         localStorage.setItem("cart", JSON.stringify(cart));
         updateCartQuantity(productId);
     }
 });
-document.querySelectorAll(".ph").forEach((e)=>{e.addEventListener("click",(ee)=>{document.querySelector("#product-image").src="../" + ee.target.getAttribute("src")})})
+
+    document.querySelectorAll(".ph").forEach((e)=>{
+        e.addEventListener("click",(ee)=>{
+            document.querySelector("#product-image").src="../" + ee.target.getAttribute("src")
+        })
+    })
+localStorage.setItem("click","no")
