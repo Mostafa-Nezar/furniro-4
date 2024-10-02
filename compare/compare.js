@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         reviews = JSON.parse(localStorage.getItem(`reviews${product2.id}`))  
                         reviews =  reviews.reduce((e,a,)=>e+a,0)     
                         views2.innerHTML=localStorage.getItem(`page_view_count_${product2.id}`)
-                         finalrate2 = (reviews / JSON.parse(localStorage.getItem(`page_rate_view_count_${product2.id}`))).toFixed(1)
+                        let finalrate2 = (reviews / JSON.parse(localStorage.getItem(`page_rate_view_count_${product2.id}`))).toFixed(1)
                         vv.forEach((path, index) => {
                             path.style.color = index < +finalrate2 ? "#FFC700" : "lightgray";
                         });
