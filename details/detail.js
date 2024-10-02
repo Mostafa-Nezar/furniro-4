@@ -1,11 +1,9 @@
-import {createproduct,likeitem ,myproducts} from "../main/products.js";
-console.log(myproducts);
+import {createproduct,myproducts} from "../main/products.js";
 const stars = document.querySelectorAll('.stars input');
 const ratingValue = document.getElementById('rating-value');
 const vtwo =  document.querySelector(".v2")
 document.addEventListener("DOMContentLoaded", () => {
     let productId = new URLSearchParams(window.location.search).get('id');
-    console.log(myproducts);
     if (productId && myproducts) {
         let product = myproducts.find(p => p.id == productId);
         if (product) {
@@ -18,21 +16,21 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 views = 1;
             }
-            localStorage.setItem(keyviews, views); 
+            localStorage.setItem(keyviews, views);
             if (rateviews) {
                 rateviews = parseInt(rateviews) + 1;
             } else {
                 rateviews = 1;
             }
-            localStorage.setItem(keyrateviews, rateviews); 
+            localStorage.setItem(keyrateviews, rateviews);
             window.onload = () =>{
                 rateviews--;  
                 localStorage.setItem(keyrateviews, rateviews);
             }
             stars.forEach((e) => {
-                e.addEventListener("click", (ee) => {
+                e.addEventListener("click", () => {
                         rateviews++;  
-                        localStorage.setItem(keyrateviews, rateviews);    
+                        localStorage.setItem(keyrateviews, rateviews);     
                 });
             });   
             function createRateviewsOnceFunction(stars, keyrateviews, rateviews) {
@@ -69,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".two img").src="../" + product.image2
             document.querySelector(".three img").src="../" + product.image3
             document.querySelector(".four img").src="../" + product.image4
+            document.querySelector(".comp").style.cursor=`pointer`
             document.querySelector(".comp").onclick = () =>{
             location.assign(`/furniro-4/compare/compare.html?id=${productId}`)
             }
@@ -83,7 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 });
             }
-
             let lastSelectedRating = null;
             window.addEventListener('beforeunload', function() {
                 if (lastSelectedRating !== null) {
@@ -92,6 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     localStorage.setItem(`reviews${product.id}`, JSON.stringify(reviews));
                     localStorage.setItem(`rate${product.id}`, lastSelectedRating);
                 }
+                window.location.reload()
             });
             stars.forEach((star) => {
                 star.addEventListener('change', function() {
@@ -99,8 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     ratingValue.textContent = lastSelectedRating;
                     vtwo.textContent = " " + lastSelectedRating + " ";
                 });
-            });
-            
+            });         
             document.getElementById("add-to-cart").onclick = () => {
                 let cart = JSON.parse(localStorage.getItem("cart")) || [];
                 let existingProduct = cart.find(p => p.productid == product.id);
@@ -117,16 +115,12 @@ document.addEventListener("DOMContentLoaded", () => {
             };
         }
     }
-
     if (productId <= 4) {
         myproducts.length = 5;
-    }
-    
+    }   
     let listproduct = document.querySelector(".similar .row");
     myproducts.length = 8;
     createproduct(listproduct,myproducts.filter((e) => e.id != productId))
-
-    likeitem();
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     let cartItem = cart.find(p => p.productid == productId);
 
