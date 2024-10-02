@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (rateviews) {
                 rateviews = parseInt(rateviews) + 1;
             } else {
-                rateviews = 1;
+                rateviews = 2;
             }
             window.onload = () =>{
                 rateviews--;  
