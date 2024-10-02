@@ -32,11 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
             stars.forEach((e) => {
                 e.addEventListener("click", (ee) => {
                         rateviews++;  
-                        localStorage.setItem(keyrateviews, rateviews);
-                        localStorage.setItem("click","yes");
-                        if (localStorage.getItem("click")==="yes") {
-                            rateviews--
-                        }       
+                        localStorage.setItem(keyrateviews, rateviews);    
                 });
             });   
             function createRateviewsOnceFunction(stars, keyrateviews, rateviews) {
@@ -74,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".three img").src="../" + product.image3
             document.querySelector(".four img").src="../" + product.image4
             document.querySelector(".comp").onclick = () =>{
-            location.assign(`/compare/compare.html?id=${productId}`)
+            location.assign(`/furniro-4/compare/compare.html?id=${productId}`)
             }
             const savedRating = localStorage.getItem(`rate${product.id}`)
             if (savedRating) {
