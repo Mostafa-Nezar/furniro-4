@@ -160,6 +160,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
     document.querySelectorAll(".ph").forEach((e)=>{
         e.addEventListener("click",(ee)=>{
-            document.querySelector("#product-image").src="../" + ee.target.getAttribute("src")
+            document.querySelector("#product-image").src= ee.target.getAttribute("src")
         })
     })
