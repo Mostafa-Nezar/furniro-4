@@ -4,7 +4,7 @@ let myArray = [];
 
 async function fetchData() {
   try {
-    let response = await fetch("../main/productlist.json");
+    let response = await fetch("../main/productlist2.json");
     let data = await response.json();
     myArray = data[0];
     localStorage.setItem("myarr", JSON.stringify(myArray)); 
@@ -80,7 +80,7 @@ let refreshcart = () => {
       </div>
 </div>
     `
-if (window.location.pathname == "/furniro-4/cart/cart.html") {
+if (window.location.pathname == "/cart/cart.html") {
       newitem.innerHTML = `
     <div class="myitem">
     <div class="image">
@@ -105,7 +105,7 @@ if (window.location.pathname == "/furniro-4/cart/cart.html") {
 </div>
     `
     }
-    if(window.location.pathname == "/furniro-4/checkout/checkout.html") {
+    if(window.location.pathname == "/checkout/checkout.html") {
   document.querySelector(".subtotal").innerHTML=`<span class="ms-5">Rs ${finalreset}</span>`
     newitem.classList="";
       newitem.innerHTML = 
@@ -124,7 +124,7 @@ if (window.location.pathname == "/furniro-4/cart/cart.html") {
   tot.innerText = totq;
   document.querySelector(".subtotal").innerHTML=`Subtotal : <span class="ms-5 fw-bold" style="color: var(--primary);">Rs ${finalreset},000.00</span>`
   document.querySelector(".total").innerHTML=`Total : <span style="color:var(--primary);" class="ms-5 mt-5 fs-5">Rs ${finalreset},00.00</span>`
-  if(window.location.pathname == "/furniro-4/checkout/checkout.html") {
+  if(window.location.pathname == "/checkout/checkout.html") {
     document.querySelector(".subtotal").innerHTML=`<span>Rs ${finalreset},000.00</span>`
     document.querySelector(".total").innerHTML=` <span style="color:var(--primary);" class="fw-bold me-2 mt-5 fs-4">Rs ${finalreset},000.00</span>`
     

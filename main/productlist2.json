@@ -1,0 +1,2118 @@
+[[
+{"id":1, 
+"key":"hello",
+"name":"Syltherine",
+"oldprice":350,
+"price":250,
+"liked": false,
+"des":"Stylish cafe chair",
+"general":{
+"salespackage":"1 section sofa",
+"model":"DTUBLIGRBL568",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"matte",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"no",
+"maxmumloadcapcity":"280 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/Images.png",
+"image":"images/Images.png",
+"image1":"images/sm1.png",
+"image2":"images/Images.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale":30
+},
+{"id":2,
+"key":"hello",
+"name":"Leviosa",
+"price":250,
+"liked": false,
+"des":"Stylish cafe chair",
+"not":"x",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/image2.png",
+"image":"images/image2.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/image2.png",
+"image4":"images/sm4.png"
+},
+{"id":3, 
+"key":"hello",
+"name":"Lolito",
+"oldprice":1400,
+"price":700,
+"liked": false,
+"des":"Luxury big sofa",
+"general":{
+"salespackage":"1 section sofa",
+"model":"DTUBLIGRBL568",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"matte",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"no",
+"maxmumloadcapcity":"280 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/Images2.png",
+"image":"images/Images2.png",
+"image1":"images/sm1.png",
+"image2":"images/sm2.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale" : 50
+},
+{"id":4,
+"key":"hello",
+"name":"Respira",
+"price":500,
+"liked": false,
+"des":"Outdoor bar table and stool",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/Images3.png",
+"image":"images/Images3.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale" : 50,
+"new" : "New"
+
+},
+{"id":5, 
+"key":"hello",
+"name":"Grifo",
+"price":150,
+"liked": false,
+"des":"Night lamp",
+"general":{
+"salespackage":"1 section sofa",
+"model":"DTUBLIGRBL568",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"matte",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"no",
+"maxmumloadcapcity":"280 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/image5.png",
+"image":"images/image5.png",
+"image1":"images/sm1.png",
+"image2":"images/sm2.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png"
+},
+{"id":6,
+"key":"hello",
+"name":"Muggo",
+"price":200,
+"liked": false,
+"des":"Small mug",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/image6.png",
+"image":"images/image6.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"new":"New"
+
+},
+{"id":7, 
+"key":"hello",
+"name":"Pingky",
+"oldprice":1400,
+"price":700,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 section sofa",
+"model":"DTUBLIGRBL568",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"matte",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"no",
+"maxmumloadcapcity":"280 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/image7.png",
+"image":"images/image7.png",
+"image1":"images/sm1.png",
+"image2":"images/sm2.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale":50
+},
+{"id":8,
+"key":"hello",
+"name":"Potty",
+"price":700,
+"liked": false,
+"des":"Cute bed set",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/image8.png",
+"image":"images/image8.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"new":"New"
+},
+{"id":9, 
+"key":"hello",
+"name":"zaotty",
+"price":100,
+"liked": false,
+"oldprice":"1500",
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 section sofa",
+"model":"DTUBLIGRBL568",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"matte",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"no",
+"maxmumloadcapcity":"280 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/asgaardsofa.png",
+"image":"images/asgaardsofa.png",
+"image1":"images/sm1.png",
+"image2":"images/sm2.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale":30
+},
+{"id":10,
+"key":"hello",
+"name":"zzbotty",
+"price":200,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/rectangle43.png",
+"image":"images/rectangle43.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png"
+},
+{"id":11, 
+"key":"hello",
+"name":"zwotty",
+"price":100,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 section sofa",
+"model":"DTUBLIGRBL568",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"matte",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"no",
+"maxmumloadcapcity":"280 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/table.png",
+"image":"images/table.png",
+"image1":"images/sm1.png",
+"image2":"images/sm2.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale":50
+},
+{"id":12,
+"key":"hello",
+"name":"Potty",
+"price":200,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/bed.png",
+"image":"images/bed.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"new" : "New"
+},
+{"id":13, 
+"key":"hello",
+"name":"zaotty",
+"price":100,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 section sofa",
+"model":"DTUBLIGRBL568",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"matte",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"no",
+"maxmumloadcapcity":"280 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/kit.png",
+"image":"images/kit.png",
+"image1":"images/sm1.png",
+"image2":"images/sm2.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png"
+},
+{"id":14,
+"key":"hello",
+"name":"abcotty",
+"price":200,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/lunch.png",
+"image":"images/lunch.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"new":"New"
+},
+{"id":15, 
+"key":"hello",
+"name":"potty",
+"price":100,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 section sofa",
+"model":"DTUBLIGRBL568",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"matte",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"no",
+"maxmumloadcapcity":"280 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/vas.png",
+"image":"images/vas.png",
+"image1":"images/sm1.png",
+"image2":"images/sm2.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale":50
+},
+{"id":16,
+"key":"hello",
+"name":"wotty",
+"price":200,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/baby.png",
+"image":"images/baby.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"new" : "New"
+},
+{"id":17, 
+"key":"hello",
+"name":"botty",
+"price":100,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 section sofa",
+"model":"DTUBLIGRBL568",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"matte",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"no",
+"maxmumloadcapcity":"280 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/Images.png",
+"image":"images/Images.png",
+"image1":"images/sm1.png",
+"image2":"images/sm2.png",
+"image3":"images/Images.png",
+"image4":"images/sm4.png",
+"sale":30
+},
+{"id":18,
+"key":"hello",
+"name":"Block",
+"price":200,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/block.png",
+"image":"images/block.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png"
+},
+{"id":19, 
+"key":"hello",
+"name":"chef corner",
+"price":100,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 section sofa",
+"model":"DTUBLIGRBL568",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"matte",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"no",
+"maxmumloadcapcity":"280 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/chef.png",
+"image":"images/chef.png",
+"image1":"images/sm1.png",
+"image2":"images/chef.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"new":"New"
+},
+{"id":20,
+"key":"hello",
+"name":"Respira",
+"price":200,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/Images3.png",
+"image":"images/Images3.png",
+"image1":"images/kit.png",
+"image2":"images/Images3.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale" : 50
+},
+{"id":21, 
+"key":"hello",
+"name":"Kitchen",
+"price":100,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 section sofa",
+"model":"DTUBLIGRBL568",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"matte",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"no",
+"maxmumloadcapcity":"280 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/kit.png",
+"image":"images/kit.png",
+"image1":"images/sm1.png",
+"image2":"images/sm2.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png"
+},
+{"id":22,
+"key":"hello",
+"name":"Out door Sofa",
+"price":200,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/library.png",
+"image":"images/library.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"new":"New"
+},
+{"id":23, 
+"key":"hello",
+"name":"zaotty",
+"price":100,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 section sofa",
+"model":"DTUBLIGRBL568",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"matte",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"no",
+"maxmumloadcapcity":"280 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/outdoorsofa.png",
+"image":"images/outdoorsofa.png",
+"image1":"images/sm1.png",
+"image2":"images/sm2.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale":50
+},
+{"id":24,
+"key":"hello",
+"name":"Asgaard sofa",
+"price":200,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/image8.png",
+"image":"images/image8.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"new":"New"
+},
+{"id":25, 
+"key":"hello",
+"name":"Bedroom",
+"price":100,
+"liked": false,
+"des":"minimalist flower por",
+"oldprice":"1500",
+"general":{
+"salespackage":"1 section sofa",
+"model":"DTUBLIGRBL568",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"matte",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"no",
+"maxmumloadcapcity":"280 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/bed.png",
+"image":"images/bed.png",
+"image1":"images/bed.png",
+"image2":"images/sm2.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale":30
+},
+{"id":26,
+"key":"hello",
+"name":"Pingky",
+"price":200,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/image7.png",
+"image":"images/image7.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png"
+},
+{"id":27, 
+"key":"hello",
+"name":"Asgaard sofa",
+"price":100,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 section sofa",
+"model":"DTUBLIGRBL568",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"matte",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"no",
+"maxmumloadcapcity":"280 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/brown.png",
+"image":"images/brown.png",
+"image1":"images/sm1.png",
+"image2":"images/sm2.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"new":"New"
+},
+{"id":28,
+"key":"hello",
+"name":"Lolito",
+"price":200,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"oldprice":"400",
+"imagetwo":"images/Images3.png",
+"image":"images/images3.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale" : 50
+},
+{"id":29, 
+"key":"hello",
+"name":"zaotty",
+"price":100,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 section sofa",
+"model":"DTUBLIGRBL568",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"matte",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"no",
+"maxmumloadcapcity":"280 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/Images.png",
+"image":"images/Images.png",
+"image1":"images/sm1.png",
+"image2":"images/sm2.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale":30
+},
+{"id":30,
+"key":"hello",
+"name":"Asgaard sofa",
+"price":200,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/image7.png",
+"image":"images/image7.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale" : 50
+},
+{"id":31, 
+"key":"hello",
+"name":"zaotty",
+"price":100,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 section sofa",
+"model":"DTUBLIGRBL568",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"matte",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"no",
+"maxmumloadcapcity":"280 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/Images.png",
+"image":"images/Images.png",
+"image1":"images/sm1.png",
+"image2":"images/sm2.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale":30
+},
+{"id":32,
+"key":"hello",
+"name":"Asgaard sofa",
+"price":200,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/image7.png",
+"image":"images/image7.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale" : 50
+},
+{"id":33, 
+"key":"hello",
+"name":"zaotty",
+"price":100,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 section sofa",
+"model":"DTUBLIGRBL568",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"matte",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"no",
+"maxmumloadcapcity":"280 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/Images.png",
+"image":"images/Images.png",
+"image1":"images/sm1.png",
+"image2":"images/sm2.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale":30
+},
+{"id":34,
+"key":"hello",
+"name":"Asgaard sofa",
+"price":200,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/image7.png",
+"image":"images/image7.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale" : 50
+},
+{"id":35, 
+"key":"hello",
+"name":"zaotty",
+"price":100,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 section sofa",
+"model":"DTUBLIGRBL568",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"matte",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"no",
+"maxmumloadcapcity":"280 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/Images.png",
+"image":"images/Images.png",
+"image1":"images/sm1.png",
+"image2":"images/sm2.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale":30
+},
+{"id":36,
+"key":"hello",
+"name":"Asgaard sofa",
+"price":200,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/image7.png",
+"image":"images/image7.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale" : 50
+},
+{"id":37, 
+"key":"hello",
+"name":"zaotty",
+"price":100,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 section sofa",
+"model":"DTUBLIGRBL568",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"matte",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"no",
+"maxmumloadcapcity":"280 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/Images.png",
+"image":"images/Images.png",
+"image1":"images/sm1.png",
+"image2":"images/sm2.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale":30
+},
+{"id":38,
+"key":"hello",
+"name":"Asgaard sofa",
+"price":200,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/image7.png",
+"image":"images/image7.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale" : 50
+},
+{"id":39, 
+"key":"hello",
+"name":"zaotty",
+"price":100,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 section sofa",
+"model":"DTUBLIGRBL568",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"matte",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"no",
+"maxmumloadcapcity":"280 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/Images.png",
+"image":"images/Images.png",
+"image1":"images/sm1.png",
+"image2":"images/sm2.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale":30
+},
+{"id":40,
+"key":"hello",
+"name":"Asgaard sofa",
+"price":200,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/image7.png",
+"image":"images/image7.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale" : 50
+},
+{"id":41, 
+"key":"hello",
+"name":"zaotty",
+"price":100,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 section sofa",
+"model":"DTUBLIGRBL568",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"matte",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"no",
+"maxmumloadcapcity":"280 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/Images.png",
+"image":"images/Images.png",
+"image1":"images/sm1.png",
+"image2":"images/sm2.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale":30
+},
+{"id":42,
+"key":"hello",
+"name":"Asgaard sofa",
+"price":200,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/image7.png",
+"image":"images/image7.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale" : 50
+},
+{"id":43, 
+"key":"hello",
+"name":"zaotty",
+"price":100,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 section sofa",
+"model":"DTUBLIGRBL568",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"matte",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"no",
+"maxmumloadcapcity":"280 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/Images.png",
+"image":"images/Images.png",
+"image1":"images/sm1.png",
+"image2":"images/sm2.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale":30
+},
+{"id":44,
+"key":"hello",
+"name":"Asgaard sofa",
+"price":200,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/image7.png",
+"image":"images/image7.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale" : 50
+},
+{"id":45,
+"key":"hello",
+"name":"Asgaard sofa",
+"price":200,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/image7.png",
+"image":"images/image7.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale" : 50
+},
+{"id":46,
+"key":"hello",
+"name":"Asgaard sofa",
+"price":200,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/image7.png",
+"image":"images/image7.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale" : 50
+},
+{"id":47,
+"key":"hello",
+"name":"Asgaard sofa",
+"price":200,
+"liked": false,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/image7.png",
+"image":"images/image7.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale" : 50
+},
+{"id":48,
+"key":"hello",
+"name":"Asgaard sofa",
+"price":200,
+"liked": true,
+"des":"minimalist flower por",
+"general":{
+"salespackage":"1 Three Seater, 2 Single Seater",
+"model":"TFCBLIGRBL6SRHS",
+"secoundary":"Solid wood",
+"configuration":"L-shaped",
+"upholsterymaterial":"Fabric + Cotton",
+"upholsterycolor":"bright grey & Lion"
+},
+"myproduct":{
+"filingmaterial":"foam",
+"finishtype":"bright & gray lion",
+"adjustheaderest":"yes",
+"maxmumloadcapcity":"300 kg",
+"originalofmanufacture":"india"
+},
+"dimensions":{
+"width":"265.23 cm",
+"height":"76 cm",
+"depth":"167.76 cm",
+"weight":"45 KG",
+"seatheight":"41.52 cm",
+"legheight":"5.46 cm"
+},
+"warranty":{
+"summry":"1 Year Manufacturing Warranty",
+"servicetype":"For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+"dominstic":"1 Year",
+"covered":"Warranty Against Manufacturing Defect",
+"notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
+},
+"imagetwo":"images/image7.png",
+"image":"images/image7.png",
+"image1":"images/kit.png",
+"image2":"images/kit.png",
+"image3":"images/sm3.png",
+"image4":"images/sm4.png",
+"sale" : 50
+}
+]
+]

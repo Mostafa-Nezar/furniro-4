@@ -61,10 +61,12 @@ button,a,.hover-red svg{
     background-color: var(--primary);
     color: white;
 }
-.lay a:hover:not(.likex){
+.lay a:hover{
     color: var(--primary) !important;
 }
-
+.lay a.likex:hover{
+    color: var(--redcolor) !important;
+}
 /* footer */
 
 ul li input{

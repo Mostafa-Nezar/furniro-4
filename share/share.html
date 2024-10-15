@@ -36,27 +36,22 @@
                 </div>
             </div>
         </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
     document.addEventListener("DOMContentLoaded", () => {
       const projectTitle = encodeURIComponent("Check out this project!");
-  
       document.querySelectorAll(".share-icon").forEach(icon => {
           icon.addEventListener("click", (e) => {
               let shareUrl = "";
-  
               if (icon.classList.contains("twitter")) {
-                  shareUrl = `https://twitter.com/intent/tweet?url=https://mostafa-nezar.github.io/furniro-e-commerce/shop/shop.html&text=${projectTitle}`;
+                  shareUrl = `https://twitter.com/intent/tweet?url=https://mostafa-nezar.github.io/furniro-4/shop/shop.html&text=${projectTitle}`;
               } else if (icon.classList.contains("linkedin")) {
-                  shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=https://mostafa-nezar.github.io/furniro-e-commerce/shop/shop.html&title=${projectTitle}`;
+                  shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=https://mostafa-nezar.github.io/furniro-4/shop/shop.html&title=${projectTitle}`;
               } else if (icon.classList.contains("facebook")) {
-                  shareUrl = `https://www.facebook.com/sharer/sharer.php?u=https://mostafa-nezar.github.io/furniro-e-commerce/shop/shop.html`;
+                  shareUrl = `https://www.facebook.com/sharer/sharer.php?u=https://mostafa-nezar.github.io/furniro-4/shop/shop.html`;
               } else if (icon.classList.contains("whatsapp")) {
-                  shareUrl = `https://api.whatsapp.com/send?text=https://mostafa-nezar.github.io/furniro-e-commerce/shop/shop.html`;
+                  shareUrl = `https://api.whatsapp.com/send?text=https://mostafa-nezar.github.io/furniro-4/shop/shop.html`;
               }
-              
-  
               if (shareUrl) {
                   window.open(shareUrl, "_blank", "width=600,height=400");
               }

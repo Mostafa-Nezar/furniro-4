@@ -1,4 +1,4 @@
-import {createproduct,myproducts} from "../main/products.js";
+import {createproduct,myproducts,likeitem} from "../main/products.js";
 const stars = document.querySelectorAll('.stars input');
 const ratingValue = document.getElementById('rating-value');
 const vtwo =  document.querySelector(".v2")
@@ -11,28 +11,28 @@ document.addEventListener("DOMContentLoaded", () => {
             const keyrateviews = `page_rate_view_count_${product.id}`;
             let views = localStorage.getItem(keyviews);
             let rateviews = localStorage.getItem(keyrateviews);
-            if (views) {
-                views = parseInt(views) + 1;
-            } else {
-                views = 1;
-            }
+            views = (views ? parseInt(views) + 1 : 1);
             localStorage.setItem(keyviews, views);
-            if (rateviews) {
-                rateviews = parseInt(rateviews) + 1;
-            } else {
-                rateviews = 1;
-            }
+            rateviews = (rateviews ? parseInt(rateviews) + 1 : 1);
             localStorage.setItem(keyrateviews, rateviews);
             window.onload = () =>{
                 rateviews--;  
                 localStorage.setItem(keyrateviews, rateviews);
             }
+            let rateviewIncremented = false;  
+
+            function incrementRateviewsOnce() {
+                if (!rateviewIncremented) { 
+                    rateviews++;  
+                    localStorage.setItem(keyrateviews, rateviews); 
+                    rateviewIncremented = true;
+                }
+            }
             stars.forEach((e) => {
                 e.addEventListener("click", () => {
-                        rateviews++;  
-                        localStorage.setItem(keyrateviews, rateviews);     
+                    incrementRateviewsOnce();  
                 });
-            });   
+            }); 
             function createRateviewsOnceFunction(stars, keyrateviews, rateviews) {
                 let hasBeenCalled = false;
                 return () => {
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".four img").src="../" + product.image4
             document.querySelector(".comp").style.cursor=`pointer`
             document.querySelector(".comp").onclick = () =>{
-            location.assign(`/furniro-4/compare/compare.html?id=${productId}`)
+            location.assign(`/compare/compare.html?id=${productId}`)
             }
             const savedRating = localStorage.getItem(`rate${product.id}`)
             if (savedRating) {
@@ -90,8 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     localStorage.setItem(`reviews${product.id}`, JSON.stringify(reviews));
                     localStorage.setItem(`rate${product.id}`, lastSelectedRating);
                 }
-                window.location.reload()
-            });
+              });
             stars.forEach((star) => {
                 star.addEventListener('change', function() {
                     lastSelectedRating = this.value;
@@ -115,12 +114,13 @@ document.addEventListener("DOMContentLoaded", () => {
             };
         }
     }
-    if (productId <= 4) {
-        myproducts.length = 5;
-    }   
+    let products = myproducts
+    const chunkSize = 5; 
+    const startIndex = Math.floor((productId - 1) / chunkSize) * chunkSize;
+    products = products.slice(startIndex, startIndex + chunkSize);    
     let listproduct = document.querySelector(".similar .row");
-    myproducts.length = 8;
-    createproduct(listproduct,myproducts.filter((e) => e.id != productId))
+    createproduct(listproduct,products.filter((e) => e.id != productId))
+    likeitem(listproduct,products.filter((e) => e.id != productId),myproducts)
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     let cartItem = cart.find(p => p.productid == productId);
 
@@ -159,6 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
     document.querySelectorAll(".ph").forEach((e)=>{
+        e.style.cursor = "pointer"
         e.addEventListener("click",(ee)=>{
             document.querySelector("#product-image").src= ee.target.getAttribute("src")
         })

@@ -1,7 +1,7 @@
 setTimeout(() => {
   document.querySelectorAll(".innercontent img").forEach((e)=>e.style.height="316.85px")
   document.querySelectorAll(".sth").forEach((e)=>e.style.height="63.5833px")
-  if (location.pathname == "/furniro-4/cart/cart.html") {
+  if (location.pathname == "/cart/cart.html") {
     document.querySelectorAll(".sth").forEach((e)=>e.style.height="74px")
   }
 }, 500);
@@ -12,7 +12,7 @@ document.addEventListener("click", (e) => {
     document.querySelectorAll(".sth").forEach((ee)=>{
       ee.style.height="63.5833px"
     })
-    if (location.pathname == "/furniro-4/cart/cart.html") {
+    if (location.pathname == "/cart/cart.html") {
       document.querySelectorAll(".sth").forEach((ee)=>{
               ee.style.height="74px"
         })
@@ -20,7 +20,6 @@ document.addEventListener("click", (e) => {
     }, 0);
    }
 });
-
 let scrollToTopBtn = document.getElementById("scrollToTopBtn");
   window.onscroll = function() {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -33,16 +32,15 @@ let scrollToTopBtn = document.getElementById("scrollToTopBtn");
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
   };
-
-  if ((location.pathname == "/furniro-4/details/detail.html")) {
+  if ((location.pathname == "/details/detail.html")) {
+    document.querySelectorAll(".ph").forEach(e=>e.style.height = "61px")
+    document.addEventListener("click",()=>{document.querySelectorAll(".ph").forEach(e=>e.style.height = "61px")})
     document.addEventListener("DOMContentLoaded", () => {
       const projectLink = encodeURIComponent(window.location.href);
       const projectTitle = encodeURIComponent("Check out this project!");
-  
       document.querySelectorAll(".share-icon").forEach(icon => {
-          icon.addEventListener("click", (e) => {
+          icon.addEventListener("click", () => {
               let shareUrl = "";
-  
               if (icon.classList.contains("twitter")) {
                   shareUrl = `https://twitter.com/intent/tweet?url=${projectLink}&text=${projectTitle}`;
               } else if (icon.classList.contains("linkedin")) {
@@ -51,11 +49,9 @@ let scrollToTopBtn = document.getElementById("scrollToTopBtn");
                   shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${projectLink}`;
               } else if (icon.classList.contains("whatsapp")) {
               let productId = new URLSearchParams(window.location.search).get('id');
-                  const projectLink = `https://mostafa-nezar.github.io/furniro-e-commerce/details/detail.html?id=${productId}`; // Example project link
+                  const projectLink = `https://mostafa-nezar.github.io/furniro-4/details/detail.html?id=${productId}`;
                   shareUrl = `https://api.whatsapp.com/send?text=${projectLink}`;
               }
-              
-  
               if (shareUrl) {
                   window.open(shareUrl, "_blank", "width=600,height=400");
               }
@@ -85,13 +81,11 @@ like.addEventListener("click",()=>{
     }
 })
 }
-
 // copy right 
 let copyright = () =>{
 let date = new Date()
 document.getElementById("copyright").innerHTML=`<span>${date.getFullYear()}</span>`
 }
-
 //subscribe
 let subscriber = () => {
     let vali = document.querySelector(".vali");
@@ -163,7 +157,7 @@ document.querySelectorAll(".icon-cart").forEach(e => {
     };
   });
 
-if (location.pathname != "/furniro-4/checkout.html") {
+if (location.pathname != "/checkout.html") {
   document.querySelectorAll("*").forEach((e)=>{
     e.addEventListener("click",(ee)=>{    
     if ((!ee.target.parentElement.parentElement.classList.contains("icon-cart")) && (document.querySelector("#listcardparent").classList.contains("disp")) && !ee.target.classList.contains("dont")) {
@@ -173,8 +167,6 @@ if (location.pathname != "/furniro-4/checkout.html") {
     })
   })
 }
-
-
   window.addEventListener('load', () => {
     document.body.classList.remove('no-transition');
   });
@@ -182,7 +174,7 @@ if (location.pathname != "/furniro-4/checkout.html") {
     document.body.classList.add('no-transition');
   });
 
-  if ((location.pathname == "/furniro-4/index.html") || (location.pathname == "/furniro-4/details/detail.html") || (location.pathname == "/furniro-4/shop/shop.html")) {
+  if ((location.pathname == "/index.html") || (location.pathname == "/details/detail.html") || (location.pathname == "/shop/shop.html")) {
     setTimeout(() => {
       document.querySelectorAll(".sharep").forEach((e)=>{
         e.addEventListener("click",(ee)=>{
@@ -190,5 +182,5 @@ if (location.pathname != "/furniro-4/checkout.html") {
           window.open("/share/share.html","_blank","width=600,height=400")
         })
       })
-    }, 3000);
+    }, 1000);
   }
