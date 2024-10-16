@@ -109,6 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (productId && myproducts) {
         let product = myproducts.find(p => p.id == productId);
+        views.innerHTML=localStorage.getItem(`page_view_count_${product.id}`) 
         if (product) {
             objs(product,elements)
             document.getElementById("product-image").src = "../" + product.imagetwo;

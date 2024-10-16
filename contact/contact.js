@@ -14,6 +14,6 @@ if (strregex.test(document.querySelector(".namefield").value) && emailregex.test
     e.style=``
     
               });
-  location.replace("furniro.html")
+  location.replace("../index.html")
 }
 })

@@ -140,65 +140,75 @@ select{
       <div class="row">
           <div class="col-md-6 ">
             <div class="ms-5 my-5">
-              <form class="myform ms-5 my-5">
-                  <h3 class="fw-bold mb-4">Billing details</h3>  
-                  <div class="d-flex w-75">
-                  <div class="me-2 w-50">
-                  <label for="">First name</label>
-                  <input class="input px-3 p-2 w-100" type="text">
-                  <br>
-                  </div>
-                  <div class="w-50">
-                  <label for="">Last name</label>
-                  <input class="input px-3 p-2 w-100" type="text">
-                  </div>
-                  </div>
-                  <label class="mx-1 mt-4" for="">Company Name (Optional)</label>
-                  <br>
-                  <input class="input mx-1 px-3 p-2 w-75" type="text">
-                  <br>
-                  <label class="mx-1 mt-4" for="">Country / Region</label>
-                  <br>
-                  <select class="input px-2 mx-1  w-75" type="text">
-                    <option value="sirilanka">siri lanka</option>
-                    <option value="sirilanka">siri lanka</option>
-                    <option value="sirilanka">siri lanka</option>
-                    <option value="sirilanka">siri lanka</option>
-                  </select>
-                  <br>
-                  <label class="mx-1 mt-4" for="">Street address</label>
-                  <br>
-                  <input class="input mx-1 px-3 p-2 w-75" type="text">
-                  <br>
-                  <label class="mx-1 mt-4" for="">Town / City</label>
-                  <br>
-                  <input class="input mx-1 px-3 p-2 w-75" type="text">
-                  <br>
-                  <label class="mx-1 mt-4" for="">Province</label>
-                  <br>
-                  <select class="input mx-1 px-3 p-2 w-75">
-                    <option value="western Province">western Province</option>
-                    <option value="western union">western union</option>
-                  </select>
-                  <br>
-                  <label class="mx-1 mt-4" for="">Zip Code</label>
-                  <br>
-                  <input class="input mx-1 px-3 p-2 w-75" type="number">
-                  <br>
-                  <label class="mx-1 mt-4" for="">Phone</label>
-                  <br>
-                  <input class="input mx-1 px-3 p-2 w-75" type="tel">
-                  <br>
-                  <label class="mx-1 mt-4" for="">email</label>
-                  <br>
-                  <input class="input mx-1 px-3 p-2 w-75" type="email">
-                  <br>
-                  <br>
-                  <br>
-                  <input class="mx-1 px-3 p-2 w-75" type="text" placeholder="Additonal Information">
-                  <br>
-
-              </form>
+              <form class="myform ms-5 my-5" id="billing-form">
+                <h3 class="fw-bold mb-4">Billing details</h3>  
+            
+                <div class="d-flex w-75">
+                    <div class="me-2 w-50">
+                        <label for="firstname">First name</label>
+                        <input id="firstname" class="input px-3 p-2 w-100" type="text" required>
+                        <br>
+                    </div>
+                    <div class="w-50">
+                        <label for="lastname">Last name</label>
+                        <input id="lastname" class="input px-3 p-2 w-100" type="text" required>
+                    </div>
+                </div>
+            
+                <label class="mx-1 mt-4" for="company">Company Name (Optional)</label>
+                <br>
+                <input id="company" class="input mx-1 px-3 p-2 w-75" type="text">
+                <br>
+            
+                <label class="mx-1 mt-4" for="country">Country / Region</label>
+                <br>
+                <select id="country" class="input px-2 mx-1  w-75" required>
+                    <option value="">Select Country</option>
+                    <option value="sirilanka">Sri Lanka</option>
+                    <option value="afghanistan">Afghanistan</option>
+                    <option value="pakistan">Pakistan</option>
+                    <option value="bangladesh">Bangladesh</option>
+                </select>
+                <br>
+            
+                <label class="mx-1 mt-4" for="street">Street address</label>
+                <br>
+                <input id="street" class="input mx-1 px-3 p-2 w-75" type="text" required>
+                <br>
+            
+                <label class="mx-1 mt-4" for="city">Town / City</label>
+                <br>
+                <input id="city" class="input mx-1 px-3 p-2 w-75" type="text" required>
+                <br>
+            
+                <label class="mx-1 mt-4" for="province">Province</label>
+                <br>
+                <select id="province" class="input mx-1 px-3 p-2 w-75" required>
+                    <option value="">Select Province</option>
+                    <option value="western Province">Western Province</option>
+                </select>
+                <br>
+            
+                <label class="mx-1 mt-4" for="zip">Zip Code</label>
+                <br>
+                <input id="zip" class="input mx-1 px-3 p-2 w-75" type="number" required>
+                <br>
+            
+                <label class="mx-1 mt-4" for="phone">Phone</label>
+                <br>
+                <input id="phone" class="input mx-1 px-3 p-2 w-75" type="tel" required>
+                <br>
+            
+                <label class="mx-1 mt-4" for="email">Email</label>
+                <br>
+                <input id="email" class="input mx-1 px-3 p-2 w-75" type="email" required>
+                <br>
+            
+                <label class="mx-1 mt-4" for="additional-info">Additional Information</label>
+                <br>
+                <input id="additional-info" class="input mx-1 px-3 p-2 w-75" type="text" placeholder="Additional Information">
+                <br>
+            </form>
             </div>
           </div>
           <div class="col-md-6 mt-5 ">
@@ -235,7 +245,7 @@ select{
                     </div>
                     <p style="line-height: 1.4;  font-size: 14px; word-spacing: 1.5px; width: 80%;">Your personal data will be used to support your experience throughout this website to manage access to your account, and for other purposes described in our <span style="cursor: pointer; font-weight: bold; font-size: 16px; letter-spacing: -1px; margin:auto -1px -1px auto ;">Privcey Policy .</span></p>
                   </div>
-              <button class="mybutton" style="border: 1px solid; border-radius: 20px; color: black; background-color: transparent; padding: 1em 8em; margin: 2em auto;">Place Order</button>
+                  <button class="mybutton" style="border: 1px solid; border-radius: 20px; color: black; background-color: transparent; padding: 1em 8em; margin: 2em auto;" id="place-order-button">Place Order</button>
             </div>
           </div>
         </div>
@@ -326,5 +336,7 @@ select{
       <script src="../main/cart.js"></script>
       <script src="checkout.js"></script>
       <script src="../main/main.js"></script>
+      <script>
+      </script>
 </body>
 </html>

@@ -1,19 +1,12 @@
 let cart = [];
 let myArray = [];
-
-
 async function fetchData() {
-  try {
     let response = await fetch("../main/productlist2.json");
     let data = await response.json();
     myArray = data[0];
     localStorage.setItem("myarr", JSON.stringify(myArray)); 
-  } catch (error) {
-    console.error("Error fetching data:", error);
-  }
 }
 fetchData();
-
 function getProductData() {
   let storedProducts = localStorage.getItem("myarr");
   return storedProducts ? JSON.parse(storedProducts) : [];
@@ -22,8 +15,6 @@ function getCartData() {
   let storedCart = localStorage.getItem("cart");
   return storedCart ? JSON.parse(storedCart) : [];
 }
-
-
 let addtocart = (idproduct, quantity, position, price) => {
   if (quantity > 0) {
     if (position < 0) {
@@ -45,13 +36,8 @@ let addtocart = (idproduct, quantity, position, price) => {
   localStorage.setItem("cart", JSON.stringify(cart)); 
   refreshcart();
 };
-
 let refreshcart = () => {
-  let listcart = document.querySelector("#listcard");
-  let tot = document.querySelector(".icon-cart span");
-  let totq = 0;
-  let finalreset = 0;
-
+  let listcart = document.querySelector("#listcard"),tot = document.querySelector(".icon-cart span"), totq = 0,finalreset = 0;
   listcart.innerHTML = null;
   cart.forEach(item => {
     finalreset += (item.price * item.quantity)
@@ -117,8 +103,6 @@ if (window.location.pathname == "/cart/cart.html") {
       
       `
     }
-
-    ;
     listcart.appendChild(newitem);
   });
   tot.innerText = totq;
@@ -130,15 +114,12 @@ if (window.location.pathname == "/cart/cart.html") {
     
     }
 };
-
-
 document.addEventListener("click", (e) => {
   let buttonclick = e.target;
   let idproduct = e.target.dataset.id;
   let position = cart.findIndex(value => value.productid == idproduct);
   let quantity = position < 0 ? 0 : cart[position].quantity;
   let price = position < 0 ? 0 : cart[position].price; 
-
   if (buttonclick.classList.contains("addbutton") || buttonclick.classList.contains("plus") || buttonclick.classList.contains("addcart")) {
     quantity = quantity ? quantity + 1 : 1; 
     addtocart(idproduct, quantity, position, price); 
@@ -156,7 +137,6 @@ document.addEventListener("click", (e) => {
     addtocart(idproduct, quantity, position, price);
   }
 });
-
 let initapp = () => {
   cart = getCartData(); 
   myArray = getProductData();

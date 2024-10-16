@@ -70,19 +70,21 @@ document.querySelector(".myownfilter").addEventListener("click", resetProducts);
 setTimeout(() => {
     document.addEventListener("click", (e) => {
             const count = document.querySelectorAll(".cont").length;
-            [document.querySelector(".myshow").innerHTML, document.querySelector(".show span").innerHTML] = [count, count];
+           document.querySelector(".show span").innerHTML = count;
     });
+    document.addEventListener("input", (e) => {
+        const count = document.querySelectorAll(".cont").length;
+       document.querySelector(".show span").innerHTML = count;
+});
 }, 0);
 let likeitem = (productContainers, arr, arr2, arr3) => {
     productContainers.forEach((container) => { container.innerHTML = null; });
     crarr(arr, arr2, arr3);  
-
     productContainers.forEach((container) => {
         container.addEventListener("click", (event) => {
             const likeElement = event.target.closest(".likex");
             if (!likeElement) return;
             event.preventDefault();
-
             let productId = likeElement.dataset.id;
             let myproduct = arr.find(p => p.id == productId) || arr2.find(p => p.id == productId) || arr3.find(p => p.id == productId);
             toggleLike(likeElement, myproduct, [...arr, ...arr2, ...arr3]);
@@ -90,3 +92,15 @@ let likeitem = (productContainers, arr, arr2, arr3) => {
     });
 };
 likeitem(productContainers, myproducts, arr2, arr3);
+document.querySelector(".search").onclick = () => {document.querySelector(".search-container").classList.toggle("d-none")}
+document.querySelector(".search-input").addEventListener("input", (ee) => {
+    const searchTerm = ee.target.value.toLowerCase();
+    const filteredProducts = myproducts.filter(product =>product.name.toLowerCase().startsWith(searchTerm));
+    const filteredProducts2 = arr2.filter(product =>product.name.toLowerCase().startsWith(searchTerm));
+    const filteredProducts3 = arr3.filter(product =>product.name.toLowerCase().startsWith(searchTerm));
+    productContainers.forEach(container => {
+        container.innerHTML = null; 
+      });
+    crarr(filteredProducts, filteredProducts2, filteredProducts3);
+    document.querySelectorAll(".innercontent img").forEach((e) => e.style.height = "316.85px");
+});

@@ -1,41 +1,35 @@
 let customers = JSON.parse( localStorage.getItem("customers")) || []
 const currentDate = new Date();
-
-document.querySelector(".mybutton").onclick = () => {
-    let obj = {};
-    const inputs = document.getElementsByTagName("input");
-    const properties = ["firstname", "secoundname", "comapny", "street", "city", "zip", "phone", "email", "additonal information" ];
-
-    properties.forEach((prop, index) => {
-        obj[prop] = inputs[index].value;
-    });
-
-    obj["myz"] = JSON.parse(localStorage.getItem("finalreset"));
-    localStorage.setItem("purchases",JSON.stringify(JSON.parse(localStorage.getItem("cart"))))
-    let purchases = localStorage.getItem("purchases")
-    obj["purchases"] = purchases
-    obj["time"] = currentDate.toString()
-    obj["pay"] = document.querySelector(".paymentmethod").innerHTML 
-    customers.push(obj);
-    localStorage.setItem("customers",JSON.stringify(customers))
-    console.log(customers);    
-    document.querySelectorAll("#listcard .fs-7").forEach((e)=>{
-        console.log(e.innerText);
-        
-  
-    })
-
-    document.querySelector("#listcard").innerHTML=null
-    document.querySelector(".icon-cart span").innerHTML=0
-    document.querySelector(".total span").innerHTML="Rs 0,000,00"
-    document.querySelector(".subtotal span").innerHTML="Rs 0,000,00"
-    localStorage.removeItem("cart")
-
+document.querySelector(".mybutton").onclick = (e) => {
+    e.preventDefault();
+    const form = document.getElementById('billing-form');
+    if (form.checkValidity()) {
+        let obj = {};
+        const inputs = document.getElementsByTagName("input");
+        const properties = ["firstname", "secoundname", "comapny", "street", "city", "zip", "phone", "email", "additonal information"];
+        properties.forEach((prop, index) => {
+            obj[prop] = inputs[index].value;
+        });
+        obj["myz"] = JSON.parse(localStorage.getItem("finalreset"));
+        localStorage.setItem("purchases", JSON.stringify(JSON.parse(localStorage.getItem("cart"))));
+        let purchases = localStorage.getItem("purchases");
+        obj["purchases"] = purchases;
+        obj["time"] = new Date().toString();
+        obj["pay"] = document.querySelector(".paymentmethod").innerHTML;
+        let customers = JSON.parse(localStorage.getItem("customers")) || [];
+        customers.push(obj);
+        localStorage.setItem("customers", JSON.stringify(customers));
+        document.querySelector("#listcard").innerHTML = null;
+        document.querySelector(".icon-cart span").innerHTML = 0;
+        document.querySelector(".total span").innerHTML = "Rs 0,000,00";
+        document.querySelector(".subtotal span").innerHTML = "Rs 0,000,00";
+        localStorage.removeItem("cart");
+        localStorage.removeItem("myarrlike");
+        form.submit();
+    } else {
+        form.reportValidity();
+    }
 };
-
-console.log((JSON.parse(localStorage.getItem("customers"))));
-
-
 document.querySelectorAll(".mypayment").forEach((e)=>{
     e.style.cursor="pointer"
     e.previousElementSibling.style.cursor="pointer"
@@ -48,3 +42,4 @@ document.querySelectorAll(".mypayment").forEach((e)=>{
     console.log(ee.target.previousElementSibling);
     })
 })
+console.log((JSON.parse(localStorage.getItem("customers"))));

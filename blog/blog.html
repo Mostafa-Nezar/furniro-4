@@ -369,47 +369,40 @@
             { id: 6, name: "cart", page: "../cart/cart.html" },
             { id: 7, name: "compare", page: "../compare/compare.html" }
           ];
-          
-          // Function to display the list in the UI
           function displayList(items) {
             const ul = document.querySelector(".myul");
-            ul.innerHTML = ''; // Clear the list
-          
+            ul.innerHTML = '';
             items.forEach((e) => {
               let a = document.createElement("a");
               a.classList.add("d-block", "my-5" ,"ms-5");
               a.href = e.page;
-              a.innerHTML = e.name || "Unnamed"; // Fallback for missing names
+              a.innerHTML = e.name
               ul.appendChild(a);
             });
           }
-          
-          // Initially display the full list
           displayList(arr);
-          
-          // Toggle the .myul visibility on click
-          document.querySelector(".search-container").onclick = () => {
+            document.querySelector(".search-container").onclick = () => {
             document.querySelector(".myul").classList.remove("d-none");
           };
-          
-          // Filter the array and update UI on input change
+          document.addEventListener("click", (e) => {
+             if (!e.target.closest(".search-container")) {
+                document.querySelector(".myul").classList.add("d-none");
+              }
+           });
+
           document.querySelector("input").addEventListener("input", (ee) => {
             const filteredArr = arr.filter(e => e.name.toLowerCase().includes(ee.target.value.toLowerCase()));
             displayList(filteredArr);
             addKeyboardNavigation();
           });
-          
-          // Handle keyboard navigation and selection
           function addKeyboardNavigation() {
             const items = document.querySelectorAll(".myul a");
             let currentIndex = 0;
-          
             function updateCurrentItem() {
               items.forEach((item, index) => {
                 item.classList.toggle("gray", index === currentIndex);
               });
             }
-          
             document.addEventListener("keydown", function(event) {
               if (!document.querySelector(".myul").classList.contains("d-none")) {
                 if (event.key === "ArrowDown") {
@@ -419,7 +412,6 @@
                 } else if (event.key === "Enter") {
                   items[currentIndex].click();
                 }
-          
                 updateCurrentItem();
                 document.querySelector("input").placeholder = items[currentIndex].innerHTML;
               }
@@ -427,10 +419,7 @@
           
             updateCurrentItem();
           }
-          
-          // Initialize keyboard navigation on page load
           addKeyboardNavigation();
           </script>
-          
 </body>
 </html>
