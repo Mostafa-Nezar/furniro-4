@@ -37,11 +37,15 @@ const generateProductHTML = (product) => {
     const saleLabel = generateSaleLabel(product);
     const oldprice = product.oldprice ? `${product.oldprice}.000.00` : "";
     const price = `Rp ${product.price}.000.00`;
+    let im = `<img width="100%" class="img-fluid" src="../${product.image}" alt="${product.name}">` 
+    if (location.pathname == "/furniro-4/") {
+        im = `<img width="100%" class="img-fluid" src="${product.image}" alt="${product.name}">`     
+    }
     return `
         <div class="col-md-6 col-lg-4 col-hey">
             <div class="cont">
                 <div class="innercontent">
-                    <img width="100%" class="img-fluid" src="../${product.image}" alt="${product.name}">
+                    ${im}
                     ${saleLabel}
                 </div>
                 <div class="des">
