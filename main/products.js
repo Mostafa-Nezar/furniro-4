@@ -83,7 +83,7 @@ let likeitem = (productsshow, limitedArr, fullArr) => {
     productsshow.innerHTML = null;
     createproduct(productsshow, limitedArr);
 
-    let likeitems = document.querySelectorAll(".likex");
+let likeitems = document.querySelectorAll(".likex");
     likeitems.forEach((e) => {
         e.addEventListener("click", (ee) => {
             ee.preventDefault();

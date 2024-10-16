@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".four img").src="../" + product.image4
             document.querySelector(".comp").style.cursor=`pointer`
             document.querySelector(".comp").onclick = () =>{
+                alert("click ok for comparing")
             location.assign(`../compare/compare.html?id=${productId}`)
             }
             const savedRating = localStorage.getItem(`rate${product.id}`)
