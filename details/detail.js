@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".comp").style.cursor=`pointer`
             document.querySelector(".comp").onclick = () =>{
                 setTimeout(() => {
-                    prompt("click ok for comparing")
+                    prompt("hello")
                 }, 200);
                 setTimeout(() => {
                     location.assign(`../compare/compare.html?id=${productId}`)
