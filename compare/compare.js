@@ -30,7 +30,7 @@ if (myobj2) {
 reviews = JSON.parse(localStorage.getItem(`reviews${myobj2.id}`))  
 reviews = reviews ? reviews.reduce((e, a) => e + a, 0) : 0;
 finalrate2 = JSON.parse(localStorage.getItem(`page_rate_view_count_${myobj2.id}`))
-    ? (reviews / JSON.parse(localStorage.getItem(`page_rate_view_count_${myobj2.id}`))).toFixed(1):finalrate2;
+    ? (reviews / JSON.parse(localStorage.getItem(`page_rate_view_count_${myobj2.id}`))).toFixed(1)/2 :finalrate2;
 myrate2.innerHTML = finalrate2
 vv.forEach((path, index) => {
     path.style.color = index < +finalrate2 ? "#FFC700" : "lightgray";
