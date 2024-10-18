@@ -1,7 +1,7 @@
 let cart = [];
 let myArray = [];
 async function fetchData() {
-    let response = await fetch("../main/productlist2.json");
+    let response = await fetch("../main/productlist.json");
     let data = await response.json();
     myArray = data[0];
     localStorage.setItem("myarr", JSON.stringify(myArray)); 

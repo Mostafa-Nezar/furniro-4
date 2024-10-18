@@ -1,13 +1,17 @@
-fetch('../main/productlist2.json')
+fetch('../main/productlist.json')
     .then(response => response.json())
-    .then(products => {localStorage.setItem("myarr",JSON.stringify(products[0]))        
-    })
-let myproducts = JSON.parse(localStorage.getItem("myarrlike") || localStorage.getItem("myarr"))
+    .then(products => {
+        localStorage.setItem("myarr", JSON.stringify(products[0]));
+    });
+
+let myproducts = JSON.parse(localStorage.getItem("myarrlike") || localStorage.getItem("myarr"));
+
 const generateSaleLabel = (product) => {
     if (product.new) return `<div class="sale new">${product.new}</div>`;
     if (product.sale) return `<div class="sale">-${product.sale}%</div>`;
     return `<div class="sale"></div>`;
 };
+
 const generateLikeButton = (product) => {
     const isLiked = product.liked ? 'currentColor' : 'none';
     const likeClass = product.liked ? 'red' : '';
@@ -19,28 +23,34 @@ const generateLikeButton = (product) => {
             </svg> Like
         </a>`;
 };
-const generateButtons = (product) => `
-    <div class="d-flex justify-content-center">
-        <a class="text-white sharep fw-bold" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81c1.66 0 3-1.34 3-3s-1.34-3-3-3s-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65c0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92"/>
-            </svg> Share
-        </a>
-        <a class="mx-2 text-white fw-bold hover-red" href="../details/detail.html?id=${product.id}">
-            <svg fill="#ffffff" width="24px" height="24px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.08,7l1,1,3.44-3.45L11,1,10,2l1.8,1.8H2v1.4h9.82ZM5.86,9l-1-1L1.42,11.5,4.91,15l1-1L4.1,12.2H14V10.8H4.1Z"></path>
-            </svg> Compare
-        </a>
-        ${generateLikeButton(product)}
-    </div>`;
+
+const generateButtons = (product) => {
+    const detailLink = location.pathname === "/furniro-4/" 
+        ? `/details/detail.html?id=${product.id}` 
+        : `../details/detail.html?id=${product.id}`;
+
+    return `
+        <div class="d-flex justify-content-center">
+            <a class="text-white sharep fw-bold" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81c1.66 0 3-1.34 3-3s-1.34-3-3-3s-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65c0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92"/>
+                </svg> Share
+            </a>
+            <a class="mx-2 text-white fw-bold hover-red" href="${detailLink}">
+                <svg fill="#ffffff" width="24px" height="24px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.08,7l1,1,3.44-3.45L11,1,10,2l1.8,1.8H2v1.4h9.82ZM5.86,9l-1-1L1.42,11.5,4.91,15l1-1L4.1,12.2H14V10.8H4.1Z"></path>
+                </svg> Compare
+            </a>
+            ${generateLikeButton(product)}
+        </div>`;
+};
+
 const generateProductHTML = (product) => {
     const saleLabel = generateSaleLabel(product);
     const oldprice = product.oldprice ? `${product.oldprice}.000.00` : "";
     const price = `Rp ${product.price}.000.00`;
-    let im = `<img width="100%" class="img-fluid" src="../${product.image}" alt="${product.name}">` 
-    if (location.pathname == "/furniro-4/") {
-        im = `<img width="100%" class="img-fluid" src="${product.image}" alt="${product.name}">`     
-    }
+    const imageSrc = location.pathname === "/furniro-4/" ? `${product.image}` : `../${product.image}`;
+    const im = `<img width="100%" class="img-fluid" src="${imageSrc}" alt="${product.name}">`;
     return `
         <div class="col-md-6 col-lg-4 col-hey">
             <div class="cont">
@@ -63,10 +73,12 @@ const generateProductHTML = (product) => {
             </div>
         </div>`;
 };
+
 function createproduct(productsshow, arr) {
     const productHTML = arr.map(product => generateProductHTML(product)).join('');
     productsshow.innerHTML = productHTML;
 }
+
 let toggleLike = (likeElement, product, arr) => {
     if (!product) return;
     product.liked = !product.liked;
@@ -79,11 +91,12 @@ let toggleLike = (likeElement, product, arr) => {
         likeElement.querySelector("path").setAttribute("fill", "none");
     }
 };
+
 let likeitem = (productsshow, limitedArr, fullArr) => {
     productsshow.innerHTML = null;
     createproduct(productsshow, limitedArr);
 
-let likeitems = document.querySelectorAll(".likex");
+    let likeitems = document.querySelectorAll(".likex");
     likeitems.forEach((e) => {
         e.addEventListener("click", (ee) => {
             ee.preventDefault();
@@ -92,4 +105,5 @@ let likeitems = document.querySelectorAll(".likex");
         });
     });
 };
-export{createproduct,likeitem,toggleLike,myproducts}
+
+export { createproduct, likeitem, toggleLike, myproducts };
