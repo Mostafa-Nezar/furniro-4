@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         reviews = JSON.parse(localStorage.getItem(`reviews${product2.id}`))  
                         reviews =  reviews.reduce((e,a,)=>e+a,0)     
                         views2.innerHTML=localStorage.getItem(`page_view_count_${product2.id}`)
-                         finalrate2 = (reviews / JSON.parse(localStorage.getItem(`page_rate_view_count_${product2.id}`))).toFixed(1)
+                         finalrate2 = (reviews / JSON.parse(localStorage.getItem(`page_rate_view_count_${product2.id}`))).toFixed(1) / 2
                         vv.forEach((path, index) => {
                             path.style.color = index < +finalrate2 ? "#FFC700" : "lightgray";
                         });
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let reviews = JSON.parse(localStorage.getItem(`reviews${product.id}`))            
             reviews =  reviews.reduce((e,a,)=>e+a,0)
             views.innerHTML=localStorage.getItem(`page_view_count_${product.id}`) 
-            let finalrate =  (reviews / JSON.parse(localStorage.getItem(`page_rate_view_count_${product.id}`))).toFixed(1)
+            let finalrate =  (reviews / JSON.parse(localStorage.getItem(`page_rate_view_count_${product.id}`))).toFixed(1) / 2
             let vv = document.querySelectorAll(".stars label svg path");
                 vv.forEach((path, index) => {
                     path.style.color = index < +finalrate ? "#FFC700" : "lightgray";
