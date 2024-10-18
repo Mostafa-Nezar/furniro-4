@@ -24,9 +24,12 @@ const generateLikeButton = (product) => {
         </a>`;
 };
 
+const isFurniro4Path = location.pathname === "/furniro-4/" || location.pathname === "/furniro-4/index.html";
+
 const generateButtons = (product) => {
-    const detailLink = location.pathname === "/furniro-4/" 
-        ? `/details/detail.html?id=${product.id}` 
+    // Adjust link paths based on location.pathname
+    const detailLink = isFurniro4Path 
+        ? `/furniro-4/details/detail.html?id=${product.id}` 
         : `../details/detail.html?id=${product.id}`;
 
     return `
@@ -49,8 +52,11 @@ const generateProductHTML = (product) => {
     const saleLabel = generateSaleLabel(product);
     const oldprice = product.oldprice ? `${product.oldprice}.000.00` : "";
     const price = `Rp ${product.price}.000.00`;
-    const imageSrc = location.pathname === "/furniro-4/" ? `${product.image}` : `../${product.image}`;
+
+    // Adjust image source based on location.pathname
+    const imageSrc = isFurniro4Path ? `${product.image}` : `../${product.image}`;
     const im = `<img width="100%" class="img-fluid" src="${imageSrc}" alt="${product.name}">`;
+
     return `
         <div class="col-md-6 col-lg-4 col-hey">
             <div class="cont">
@@ -73,6 +79,7 @@ const generateProductHTML = (product) => {
             </div>
         </div>`;
 };
+
 
 function createproduct(productsshow, arr) {
     const productHTML = arr.map(product => generateProductHTML(product)).join('');
