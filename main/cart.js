@@ -47,9 +47,9 @@ let refreshcart = () => {
     let info = myArray[position]; 
     let newitem = document.createElement("div");
     newitem.classList.add("item");
-    newitem.classList.add("dont");    
+    newitem.classList.add("dont");  
     newitem.innerHTML = `
- <div class="myitem d-flex justify-content-between align-items-center ps-3 dont" style="width:92.5%;">
+<div class="myitem d-flex justify-content-between align-items-center ps-3 dont" style="width:92.5%;">
     <div class="image dont">
         <a class="dont" href="../details/detail.html?id=${info.id}">
           <img class="dont sth" src="../${info.image || ''}"alt="">
@@ -65,7 +65,28 @@ let refreshcart = () => {
         <img data-id=${info.id} class="deleteitem dont" style="width:20px; cursor:pointer;" src="../images/x.png">
       </div>
 </div>
-    `
+    `   
+const isFurniro4Path = location.pathname === "/furniro-4/" || location.pathname === "/furniro-4/index.html";
+if (isFurniro4Path) {
+newitem.innerHTML = `
+<div class="myitem d-flex justify-content-between align-items-center ps-3 dont" style="width:92.5%;">
+  <div class="image dont">
+      <a class="dont" href="../details/detail.html?id=${info.id}">
+        <img class="dont sth" src="${info.image || ''}"alt="">
+      </a>
+    </div>
+    <div class="dont">
+      <div class="dont name">${info.name || 'Unknown'}</div>
+      <div class="dont">
+          ${item.quantity} <span class="mx-2">X</span> <span class="dont" style="color:var(--primary);">rs ${info.price * item.quantity}.00</span>
+      </div>
+    </div>
+    <div class="dont">
+      <img data-id=${info.id} class="deleteitem dont" style="width:20px; cursor:pointer;" src="images/x.png">
+    </div>
+</div>
+  `
+}
 if (window.location.pathname == "/furniro-4/cart/cart.html") {
       newitem.innerHTML = `
     <div class="myitem">
