@@ -113,7 +113,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 localStorage.setItem("cart", JSON.stringify(cart));
                 updateCartQuantity(product.id);
-                location.reload()
             };
         }
     }
