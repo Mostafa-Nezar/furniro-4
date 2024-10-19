@@ -71,7 +71,7 @@ if (isFurniro4Path) {
 newitem.innerHTML = `
 <div class="myitem d-flex justify-content-between align-items-center ps-3 dont" style="width:92.5%;">
   <div class="image dont">
-      <a class="dont" href="../details/detail.html?id=${info.id}">
+      <a class="dont" href="details/detail.html?id=${info.id}">
         <img class="dont sth" src="${info.image || ''}"alt="">
       </a>
     </div>
