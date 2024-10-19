@@ -7,7 +7,7 @@ setTimeout(() => {
 }, 500);
 document.addEventListener("click", (e) => {
   let buttonclick = e.target;
-   if (buttonclick.classList.contains("addbutton") || buttonclick.classList.contains("plus") || buttonclick.classList.contains("minus") || buttonclick.classList.contains("deleteitem") || buttonclick.classList.contains("addcart")) {
+   if (buttonclick.classList.contains("addbutton") || buttonclick.classList.contains("plus") || buttonclick.classList.contains("minus") || buttonclick.classList.contains("deleteitem") || buttonclick.classList.contains("addcart") || buttonclick.id == "add-to-cart") {
     setTimeout(() => {
     document.querySelectorAll(".sth").forEach((ee)=>{
       ee.style.height="63.5833px"

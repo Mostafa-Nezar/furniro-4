@@ -141,10 +141,10 @@ document.addEventListener("click", (e) => {
   let position = cart.findIndex(value => value.productid == idproduct);
   let quantity = position < 0 ? 0 : cart[position].quantity;
   let price = position < 0 ? 0 : cart[position].price; 
-  if (buttonclick.classList.contains("addbutton") || buttonclick.classList.contains("plus") || buttonclick.classList.contains("addcart")) {
+  if (buttonclick.classList.contains("addbutton") || buttonclick.classList.contains("plus") || buttonclick.classList.contains("addcart") || buttonclick.id == "add-to-cart") {
     quantity = quantity ? quantity + 1 : 1; 
     addtocart(idproduct, quantity, position, price); 
-    if (buttonclick.classList.contains("addbutton")){
+    if (buttonclick.classList.contains("addbutton") || buttonclick.id == "add-to-cart"){
     const popup = document.getElementById('popup');
     popup.classList.add('show');
     setTimeout(() => {

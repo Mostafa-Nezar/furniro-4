@@ -101,19 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     vtwo.textContent = " " + lastSelectedRating + " ";
                 });
             });         
-            document.getElementById("add-to-cart").onclick = () => {
-                let cart = JSON.parse(localStorage.getItem("cart")) || [];
-                let existingProduct = cart.find(p => p.productid == product.id);
-
-                if (existingProduct) {
-                    existingProduct.quantity += 1;
-                } else {
-                    cart.push({ productid: product.id, quantity: 1 });
-                }
-
-                localStorage.setItem("cart", JSON.stringify(cart));
-                updateCartQuantity(product.id);
-            };
+            document.getElementById("add-to-cart").setAttribute("data-id",product.id)
         }
     }
     let products = myproducts
