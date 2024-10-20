@@ -125,6 +125,9 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".q").textContent = cartItem.quantity;
         }
     }
+    document.getElementById("add-to-cart").addEventListener("click", () => {
+        updateProductQuantity(productId, 1);
+    });
     document.querySelector(".plus").addEventListener("click", () => {
         updateProductQuantity(productId, 1);
     });
