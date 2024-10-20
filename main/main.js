@@ -174,7 +174,7 @@ if (location.pathname != "/furniro-4/checkout.html") {
     document.body.classList.add('no-transition');
   });
 
-  if ((location.pathname == "/index.html") || (location.pathname == "/details/detail.html") || (location.pathname == "/shop/shop.html")) {
+  if ((location.pathname == "/furniro-4/index.html") || (location.pathname == "/furniro-4/") || (location.pathname == "/furniro-4/details/detail.html") || (location.pathname == "/furniro-4/shop/shop.html")) {
     setTimeout(() => {
       document.querySelectorAll(".sharep").forEach((e)=>{
         e.addEventListener("click",(ee)=>{
