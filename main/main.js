@@ -179,7 +179,7 @@ if (location.pathname != "/furniro-4/checkout.html") {
       document.querySelectorAll(".sharep").forEach((e)=>{
         e.addEventListener("click",(ee)=>{
           ee.preventDefault()
-          window.open("/share/share.html","_blank","width=600,height=400")
+          window.open("/furniro-4/share/share.html","_blank","width=600,height=400")
         })
       })
     }, 1000);
