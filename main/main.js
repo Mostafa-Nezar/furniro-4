@@ -32,7 +32,7 @@ let scrollToTopBtn = document.getElementById("scrollToTopBtn");
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
   };
-  if ((location.pathname == "/details/detail.html")) {
+  if ((location.pathname == "/furniro-4/details/detail.html")) {
     document.querySelectorAll(".ph").forEach(e=>e.style.height = "61px")
     document.addEventListener("click",()=>{document.querySelectorAll(".ph").forEach(e=>e.style.height = "61px")})
     document.addEventListener("DOMContentLoaded", () => {
