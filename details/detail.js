@@ -84,22 +84,20 @@ document.addEventListener("DOMContentLoaded", () => {
                     ratingValue.textContent = lastSelectedRating;
                     product.rate = lastSelectedRating
                     vtwo.textContent = " " + lastSelectedRating + " ";
+                    if (lastSelectedRating !== null) {
+                        let reviews = JSON.parse(localStorage.getItem(`reviews${product.id}`)) || [];
+                        reviews.push(+lastSelectedRating);
+                        localStorage.setItem(`reviews${product.id}`, JSON.stringify(reviews));
+                        let reduced = reviews ? reviews.reduce((e, a) => e + a) : 0;
+                        product.reviews = reduced
+                        let averagerate  = +(JSON.parse(localStorage.getItem(`reduced${product.id}`)) / product.rateviews).toFixed(2);
+                        product.averagerate = averagerate;            
+                        localStorage.setItem(`averagerate${product.id}`, averagerate );
+                        localStorage.setItem(`reduced${product.id}`, reduced);
+                        localStorage.setItem(`rate${product.id}`, product.rate);
+                        localStorage.setItem("myarrlike",JSON.stringify(products))
+                    }
                 });
-            });
-            window.addEventListener('beforeunload', function() {
-                if (lastSelectedRating !== null) {
-                    let reviews = JSON.parse(localStorage.getItem(`reviews${product.id}`)) || [];
-                    reviews.push(+lastSelectedRating);
-                    localStorage.setItem(`reviews${product.id}`, JSON.stringify(reviews));
-                    let reduced = reviews ? reviews.reduce((e, a) => e + a) : 0;
-                    product.reviews = reduced
-                    let averagerate  = +(JSON.parse(localStorage.getItem(`reduced${product.id}`)) / product.rateviews).toFixed(2);
-                    product.averagerate = averagerate;            
-                    localStorage.setItem(`averagerate${product.id}`, averagerate );
-                    localStorage.setItem(`reduced${product.id}`, reduced);
-                    localStorage.setItem(`rate${product.id}`, product.rate);
-                    localStorage.setItem("myarrlike",JSON.stringify(products))
-                }
             });
             document.getElementById("add-to-cart").setAttribute("data-id",product.id)
         }
