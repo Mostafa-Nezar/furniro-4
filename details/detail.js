@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".comp").onclick = () =>{
                 setTimeout(() => {
                     location.reload()
-                }, 2);
+                }, 10);
             } 
 
             const savedRating = localStorage.getItem(`rate${product.id}`)
@@ -121,6 +121,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let cartItem = cart.find(p => p.productid == productId);
     if (cartItem) {
         document.querySelector(".q").textContent = cartItem.quantity;
+        sizes.forEach((e)=>{
+            e.addEventListener("click")
+        })
     }
     function updateCartQuantity(productId) {
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
