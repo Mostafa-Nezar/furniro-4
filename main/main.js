@@ -33,7 +33,13 @@ let scrollToTopBtn = document.getElementById("scrollToTopBtn");
       document.documentElement.scrollTop = 0;
   };
   if ((location.pathname == "/furniro-4/details/detail.html")) {
-    document.querySelectorAll(".ph").forEach(e=>e.style.height = "61px")
+    document.querySelectorAll(".ph").forEach((e)=>{
+      e.style.height = "61px"
+      e.style.cursor = "pointer"
+      e.addEventListener("click",(ee)=>{
+          document.querySelector("#product-image").src= ee.target.getAttribute("src")
+      })
+  })
     document.addEventListener("click",()=>{document.querySelectorAll(".ph").forEach(e=>e.style.height = "61px")})
     document.addEventListener("DOMContentLoaded", () => {
       const projectLink = encodeURIComponent(window.location.href);
@@ -53,7 +59,7 @@ let scrollToTopBtn = document.getElementById("scrollToTopBtn");
                   shareUrl = `https://api.whatsapp.com/send?text=${projectLink}`;
               }
               if (shareUrl) {
-                  window.open(shareUrl, "_blank", "width=600,height=400");
+                   window.open(shareUrl, "_blank", "width=600,height=400,left=500,top=50");
               }
           });
       });
@@ -61,78 +67,114 @@ let scrollToTopBtn = document.getElementById("scrollToTopBtn");
   }
 // like
 function like() {
-    let like = document.getElementById("heart")
-    let likesvg = document.querySelector(".likesvg .pathsvg")
-if (localStorage.getItem("color")) {
-    like.classList.add(localStorage.getItem("color"))
-    likesvg.setAttribute("fill",localStorage.getItem("fill"))
+  const arr = JSON.parse(localStorage.getItem("mails")) || [];
+  const likeButton = document.getElementById("heart");
+  const likeSvg = document.querySelector(".likesvg .pathsvg");
+  
+  if (arr.length > 0) {
+    const user = arr[0];
+    
+    // Initialize the button state based on the user's liked status
+    if (user.liked) {
+      likeButton.classList.add("red");
+      likeSvg.setAttribute("fill", "currentColor");
+    }
+
+    // Handle click event on like button
+    likeButton.addEventListener("click", () => {
+      user.liked = !user.liked; // Toggle the liked status
+      localStorage.setItem("mails", JSON.stringify(arr)); // Save updated liked status
+      
+      // Update button and SVG fill based on the new liked status
+      const isLiked = likeButton.classList.toggle("red");
+      likeSvg.setAttribute("fill", isLiked ? "currentColor" : "none");
+      localStorage.setItem("color", isLiked ? "red" : "black");
+      localStorage.setItem("fill", isLiked ? "currentColor" : "none");
+    });
+
+  } else {
+    // Create and configure alert popup
+    const alertPopup = document.createElement("div");
+    alertPopup.innerHTML = "Not Subscribed!";
+    alertPopup.classList.add("popup");
+    document.body.appendChild(alertPopup);
+
+    // Handle case where user is not subscribed
+    likeButton.addEventListener("click", () => {
+      alertPopup.classList.add("show");
+      setTimeout(() => alertPopup.classList.remove("show"), 3000); // Hide after 3 seconds
+    });
+  }
 }
 
-like.addEventListener("click",()=>{
-    like.classList.toggle("red")
-    if (like.classList.contains("red")) {
-        likesvg.setAttribute("fill","currentColor")
-        localStorage.setItem("color","red")
-        localStorage.setItem("fill","currentColor")
-    }else{
-        localStorage.setItem("color","black")
-        likesvg.setAttribute("fill","none")
-        localStorage.setItem("fill","none")
-    }
-})
-}
+
+
 // copy right 
 let copyright = () =>{
 let date = new Date()
 document.getElementById("copyright").innerHTML=`<span>${date.getFullYear()}</span>`
 }
 //subscribe
-let subscriber = () => {
-    let vali = document.querySelector(".vali");
-    let sub = document.querySelector(".subscribe");
-    let myemail = document.querySelector(".myemail");
-    
-    let arr = JSON.parse(localStorage.getItem("mails")) || [];
-    
-    let emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    
-    if (localStorage.getItem("mails")) {
-        vali.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-PersonCheck">
-            <circle cx="12" cy="7" r="5"/>
-            <path d="M17 22H5.266a2 2 0 0 1-1.985-2.248l.39-3.124A3 3 0 0 1 6.649 14H7"/>
-            <path d="M17 16.5l1.5 1.5 2.5-3"/>
-        </svg>
-    `;
-    sub.innerHTML="Subscribed"
-    myemail.disabled = true
-    }
-    let handleSubscription = () => {
-        if (emailregex.test(myemail.value) && myemail.value !== "") {
-            vali.innerHTML = `
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-PersonCheck">
-                    <circle cx="12" cy="7" r="5"/>
-                    <path d="M17 22H5.266a2 2 0 0 1-1.985-2.248l.39-3.124A3 3 0 0 1 6.649 14H7"/>
-                    <path d="M17 16.5l1.5 1.5 2.5-3"/>
-                </svg>
-            `;
-            sub.innerHTML="Subscribed"
-            arr.push(myemail.value);
-            localStorage.setItem("mails", JSON.stringify([...new Set(arr)]));
-    
-            myemail.value = "";
-            myemail.disabled = true
-        }
-    };
-    sub.addEventListener("click", handleSubscription);
-    
-    if (sub.innerHTML=="Subscribed") {
-        sub.onclick=()=>{
-            localStorage.clear()
-            location.reload()
-        }
-    }
- }
+const subscriber = () => {
+  const vali = document.querySelector(".vali");
+  const sub = document.querySelector(".subscribe");
+  const myemail = document.querySelector(".myemail");
+  const emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  let arr = JSON.parse(localStorage.getItem("mails")) || [];
+
+  // Display subscribed state if already subscribed
+  if (arr.length > 0) {
+      vali.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-PersonCheck">
+              <circle cx="12" cy="7" r="5"/>
+              <path d="M17 22H5.266a2 2 0 0 1-1.985-2.248l.39-3.124A3 3 0 0 1 6.649 14H7"/>
+              <path d="M17 16.5l1.5 1.5 2.5-3"/>
+          </svg>
+      `;
+      sub.innerHTML = "Subscribed";
+      myemail.disabled = true;
+  }
+
+  const handleSubscription = () => {
+      const emailValue = myemail.value.trim();
+      
+      if (!emailregex.test(emailValue) || emailValue === "") {
+          return; // Early return if the email is invalid
+      }
+
+      vali.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-PersonCheck">
+              <circle cx="12" cy="7" r="5"/>
+              <path d="M17 22H5.266a2 2 0 0 1-1.985-2.248l.39-3.124A3 3 0 0 1 6.649 14H7"/>
+              <path d="M17 16.5l1.5 1.5 2.5-3"/>
+          </svg>
+      `;
+      sub.innerHTML = "Subscribed";
+      
+      arr.push({ mail: emailValue, liked: false });
+      localStorage.setItem("mails", JSON.stringify(arr));
+      myemail.value = "";
+      myemail.disabled = true;
+      location.reload()
+  };
+
+  sub.addEventListener("click", handleSubscription);
+  document.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+          handleSubscription();
+      }
+  });
+
+  // Clear local storage and reload if already subscribed
+  if (arr.length > 0) {
+      sub.onclick = () => {
+          localStorage.clear();
+          location.reload();
+      };
+  }
+};
+
+
 like()
 subscriber()
 copyright()
@@ -179,8 +221,8 @@ if (location.pathname != "/furniro-4/checkout.html") {
       document.querySelectorAll(".sharep").forEach((e)=>{
         e.addEventListener("click",(ee)=>{
           ee.preventDefault()
-          window.open("/furniro-4/share/share.html","_blank","width=600,height=400")
+          window.open("/furniro-4/share/share.html","_blank","width=600,height=400,left=500,top=50")
         })
       })
     }, 1000);
-  }
+  }  

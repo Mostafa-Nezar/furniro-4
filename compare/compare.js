@@ -1,4 +1,5 @@
-import { myproducts } from "../main/products.js";
+let myproducts = JSON.parse(localStorage.getItem("myarrlike")) 
+console.log(myproducts);
 const stars = document.querySelectorAll('.stars input');
 const ratingValue = document.getElementById('rating-value');
 const views = document.querySelector(".views")
@@ -24,18 +25,14 @@ ele.forEach((element, index) => {
         element.innerHTML = data[index];
     }});
 }
-let reviews = 0
-let finalrate2 = 0
+
 if (myobj2) {
-reviews = JSON.parse(localStorage.getItem(`reviews${myobj2.id}`))  
-reviews = reviews ? reviews.reduce((e, a) => e + a, 0) : 0;
-finalrate2 = JSON.parse(localStorage.getItem(`page_rate_view_count_${myobj2.id}`))
-    ? (reviews / JSON.parse(localStorage.getItem(`page_rate_view_count_${myobj2.id}`))).toFixed(1)/2 :finalrate2;
-myrate2.innerHTML = finalrate2
+let averagerate = (localStorage.getItem(`reduced${myobj2.id}`) / localStorage.getItem(`page_rate_view_count_${myobj2.id}`)).toFixed(1)
+myrate2.innerHTML = isNaN(averagerate) ? 0 : averagerate
 vv.forEach((path, index) => {
-    path.style.color = index < +finalrate2 ? "#FFC700" : "lightgray";
+    path.style.color = index < averagerate ? "#FFC700" : "lightgray";
 });
-views2.innerHTML=localStorage.getItem(`page_view_count_${myobj2.id}`)
+views2.innerHTML=localStorage.getItem(`page_view_count_${myobj2.id}`) || 0
 document.getElementById("product-imagee").src ="../" + myobj2.imagetwo;
 document.getElementById("product-imagee").style.height='177px';
 document.querySelector(".name2").innerHTML=myobj2.name
@@ -49,32 +46,27 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("click", (e) => {
         if (!e.target.classList.contains("deleteitem") && !e.target.classList.contains("addbutton")) {
             const productId2 = e.target.dataset.id;
-            if (productId2) {
-                const product2 = myproducts.find(p => p.id == productId2);
+            const product2 = myproducts.find(p => p.id == productId2);      
                 if (product2) {
+                    document.getElementById("product-imagee").src ="../" + product2.imagetwo;
+                    document.getElementById("product-imagee").style.height='177px';
+                    document.querySelector(".name2").innerHTML=product2.name
+                    document.querySelector(".price2").innerHTML=`Rs ${product2.price},000.00`
+                    document.querySelector(".dagain2").href=`../details/detail.html?id=${productId2}`
+                    document.querySelector(".addcopm2").setAttribute("data-id",product2.id)
+                    let averagerate = (localStorage.getItem(`reduced${product2.id}`) / localStorage.getItem(`page_rate_view_count_${product2.id}`)).toFixed(1)
                     localStorage.setItem("myproduct2",JSON.stringify(product2)) 
-                }       
-                document.getElementById("product-imagee").src ="../" + product2.imagetwo;
-                document.getElementById("product-imagee").style.height='177px';
-                document.querySelector(".name2").innerHTML=product2.name
-                document.querySelector(".price2").innerHTML=`Rs ${product2.price},000.00`
-                document.querySelector(".dagain2").href=`../details/detail.html?id=${productId2}`
-                document.querySelector(".addcopm2").setAttribute("data-id",product2.id)
-                if (product2) {
                     objs(product2,elements2)
                     const savedRating2 = JSON.parse(localStorage.getItem(`rate${product2.id}`));
                     if (savedRating2 !== null) {
                         ratingValue2.textContent = savedRating2;
                         product2.rate = savedRating2;
-                        reviews = JSON.parse(localStorage.getItem(`reviews${product2.id}`))  
-                        reviews =  reviews.reduce((e,a,)=>e+a,0)     
-                        views2.innerHTML=localStorage.getItem(`page_view_count_${product2.id}`)
-                         finalrate2 = (reviews / JSON.parse(localStorage.getItem(`page_rate_view_count_${product2.id}`))).toFixed(1) / 2
+                        views2.innerHTML=product2.views
                         vv.forEach((path, index) => {
-                            path.style.color = index < +finalrate2 ? "#FFC700" : "lightgray";
+                            path.style.color = index < averagerate ? "#FFC700" : "lightgray";
                         });
-                        myrate2.innerHTML = finalrate2
-                        localStorage.setItem("myarr", JSON.stringify(myproducts));
+                        myrate2.innerHTML = averagerate
+                        localStorage.setItem("myarrlike", JSON.stringify(myproducts));
                     } else {
                         ratingValue2.textContent = 0;
                         product2.rate = 0;
@@ -84,15 +76,14 @@ document.addEventListener("DOMContentLoaded", () => {
                         vv.forEach((path) => {
                             path.style.color = "lightgray";
                         });
-            
-                        localStorage.setItem("myarr", JSON.stringify(myproducts));
+                        localStorage.setItem("myarrlike", JSON.stringify(myproducts));
                     }
                     const stars2 = document.querySelectorAll(".stars2 input[type='radio']");
                     stars2.forEach(star => {
                         star.checked = star.value == savedRating2;
                     });
                 }
-            }
+            
     }
     });
     const ul = document.getElementById('item-list');
@@ -117,20 +108,18 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".price").innerHTML= `Rs ${product.price},000.00`
             document.querySelector(".dagain").href=`../details/detail.html?id=${productId}`
             document.querySelector(".addcopm1").setAttribute("data-id",product.id)
-            let reviews = JSON.parse(localStorage.getItem(`reviews${product.id}`))            
-            reviews =  reviews.reduce((e,a,)=>e+a,0)
-            views.innerHTML=localStorage.getItem(`page_view_count_${product.id}`) 
-            let finalrate =  (reviews / JSON.parse(localStorage.getItem(`page_rate_view_count_${product.id}`))).toFixed(1) / 2
+            let averagerate = (localStorage.getItem(`reduced${product.id}`) / localStorage.getItem(`page_rate_view_count_${product.id}`)).toFixed(1)
+            views.innerHTML=product.views
             let vv = document.querySelectorAll(".stars label svg path");
                 vv.forEach((path, index) => {
-                    path.style.color = index < +finalrate ? "#FFC700" : "lightgray";
+                    path.style.color = index < averagerate ? "#FFC700" : "lightgray";
                 });
-             myrate.innerHTML = finalrate
+             myrate.innerHTML = isNaN(averagerate) ? 0 : averagerate
             const savedRating = localStorage.getItem(`rate${product.id}`);
             if (savedRating) {
                 ratingValue.textContent = savedRating;
                 product.rate = savedRating
-                localStorage.setItem("myarr",JSON.stringify(myproducts))
+                localStorage.setItem("myarrlike",JSON.stringify(myproducts))
                 stars.forEach(star => {
                     if (star.value === savedRating) {
                         star.checked = true;
@@ -143,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                     ratingValue.textContent = selectedRating;
                     localStorage.setItem(`rate${product.id}`, selectedRating);
-                    localStorage.setItem("myarr",JSON.stringify(myproducts))
+                    localStorage.setItem("myarrlike",JSON.stringify(myproducts))
                 });
             });
         }

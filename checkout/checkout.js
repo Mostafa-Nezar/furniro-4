@@ -3,7 +3,7 @@ const currentDate = new Date();
 document.querySelector(".mybutton").onclick = (e) => {
     e.preventDefault();
     const form = document.getElementById('billing-form');
-    if (form.checkValidity()) {
+    // if (form.checkValidity()) {
         let obj = {};
         const inputs = document.getElementsByTagName("input");
         const properties = ["firstname", "secoundname", "comapny", "street", "city", "zip", "phone", "email", "additonal information"];
@@ -26,9 +26,9 @@ document.querySelector(".mybutton").onclick = (e) => {
         localStorage.removeItem("cart");
         localStorage.removeItem("myarrlike");
         form.submit();
-    } else {
-        form.reportValidity();
-    }
+    // } else {
+    //     form.reportValidity();
+    // }
 };
 document.querySelectorAll(".mypayment").forEach((e)=>{
     e.style.cursor="pointer"
