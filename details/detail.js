@@ -33,10 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.setItem(keyviews, views);
             rateviews = (rateviews ? parseInt(rateviews) + 1 : 1);
             localStorage.setItem(keyrateviews, rateviews);
-            window.onload = () =>{
-                rateviews--;  
-                localStorage.setItem(keyrateviews, rateviews);
-            }
             let rateviewIncremented = false;  
             stars.forEach((e) => {
                 e.addEventListener("click", () => {
