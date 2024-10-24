@@ -82,12 +82,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     let reduced = reviews ? reviews.reduce((e, a) => e + a) : 0;
                     let averagerate  = +(reduced / rateviews).toFixed(2);
                     product.averagerate = averagerate;            
-                    localStorage.setItem(`averagerate${product.id}`, averagerate);
-                    localStorage.setItem(`reduced${product.id}`, reduced);
                     localStorage.setItem(`rate${product.id}`, product.rate);
                     localStorage.setItem("myarrlike",JSON.stringify(products))
                 }
-                this.location.reload()
             });
             document.getElementById("add-to-cart").setAttribute("data-id",product.id)
         }
