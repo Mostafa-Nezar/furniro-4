@@ -199,7 +199,7 @@ document.querySelectorAll(".icon-cart").forEach(e => {
     };
   });
 
-if (location.pathname != "/furniro-4/checkout.html") {
+if (location.pathname != "/furniro-4/checkout/checkout.html") {
   document.querySelectorAll("*").forEach((e)=>{
     e.addEventListener("click",(ee)=>{    
     if ((!ee.target.parentElement.parentElement.classList.contains("icon-cart")) && (document.querySelector("#listcardparent").classList.contains("disp")) && !ee.target.classList.contains("dont")) {

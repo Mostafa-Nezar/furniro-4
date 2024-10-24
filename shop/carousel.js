@@ -92,7 +92,6 @@ let likeitem = (productContainers, arr, arr2, arr3) => {
     });
 };
 likeitem(productContainers, myproducts, arr2, arr3);
-document.querySelector(".search").onclick = () => {document.querySelector(".search-container").classList.toggle("d-none")}
 document.querySelector(".search-input").addEventListener("input", (ee) => {
     const searchTerm = ee.target.value.toLowerCase();
     const filteredProducts = myproducts.filter(product =>product.name.toLowerCase().startsWith(searchTerm));
@@ -103,4 +102,8 @@ document.querySelector(".search-input").addEventListener("input", (ee) => {
       });
     crarr(filteredProducts, filteredProducts2, filteredProducts3);
     document.querySelectorAll(".innercontent img").forEach((e) => e.style.height = "316.85px");
+});
+document.addEventListener("click", (e) => {
+    const searchElement = document.querySelector(".search-container")
+!e.target.closest(".search") ? searchElement.classList.add("d-none") : searchElement.classList.remove("d-none");
 });

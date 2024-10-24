@@ -66,6 +66,12 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".three img").src="../" + product.image3
             document.querySelector(".four img").src="../" + product.image4
             document.querySelector(".comp").href = `../compare/compare.html?id=${productId}`
+            document.querySelector(".comp").onclick = () =>{
+                setTimeout(() => {
+                    location.reload()
+                }, 2);
+            } 
+
             const savedRating = localStorage.getItem(`rate${product.id}`)
             if (savedRating) {
                 ratingValue.textContent = savedRating;
