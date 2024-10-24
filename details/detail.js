@@ -23,30 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             })
             const keyviews = `page_view_count_${product.id}`;
-            const keyrateviews = `page_rate_view_count_${product.id}`;
             let views = localStorage.getItem(keyviews);
-            let rateviews = localStorage.getItem(keyrateviews);
+            let rateviews = +localStorage.getItem(`rateviews${product.id}`)
             views = (views ? parseInt(views) + 1 : 1);
             localStorage.setItem(keyviews, views);
-            rateviews = (rateviews ? parseInt(rateviews) + 1 : 1);
-            localStorage.setItem(keyrateviews, rateviews);
-            window.onload = () =>{
-                rateviews--;  
-                localStorage.setItem(keyrateviews, rateviews);
-            }
             let rateviewIncremented = false;  
-            stars.forEach((e) => {
-                e.addEventListener("click", () => {
-                    if (!rateviewIncremented) { 
-                        rateviews++;  
-                        localStorage.setItem(keyrateviews, rateviews); 
-                        rateviewIncremented = true;
-                    }
-                });
-            }); 
-            localStorage.setItem(keyviews, views);
-            
-            localStorage.setItem(keyrateviews, rateviews);
+            localStorage.setItem(keyviews, views);            
                 product.rateviews = rateviews;                
                 product.views = views;
             localStorage.setItem("myarrlike", JSON.stringify(products))            
@@ -63,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".three img").src="../" + product.image3
             document.querySelector(".four img").src="../" + product.image4
             document.querySelector(".comp").onclick = () =>{
-                location.reload();
                 setTimeout(() => {
                     location.assign(`../compare/compare.html?id=${productId}`);
                 }, 10);                
@@ -82,6 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
             let lastSelectedRating = null;
             stars.forEach((star) => {
                 star.addEventListener('change', function() {
+                    if (!rateviewIncremented) { 
+                        rateviews++;  
+                        localStorage.setItem(`rateviews${product.id}`,rateviews)
+                        rateviewIncremented = true;
+                    }
                     lastSelectedRating = this.value;
                     ratingValue.textContent = lastSelectedRating;
                     product.rate = lastSelectedRating
@@ -103,6 +89,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
             document.getElementById("add-to-cart").setAttribute("data-id",product.id)
+            console.log(rateviews);
+            
         }
     }
 

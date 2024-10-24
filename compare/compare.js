@@ -29,10 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     if (myobj2) {
-        myrate2.innerHTML = isNaN(myobj2.averagerate) ? 0 : myobj2.averagerate / 2;
+        myrate2.innerHTML = isNaN(myobj2.averagerate) ? 0 : myobj2.averagerate;
 
         vv.forEach((path, index) => {
-            path.style.color = index < myobj2.averagerate / 2 ? "#FFC700" : "lightgray";
+            path.style.color = index < myobj2.averagerate ? "#FFC700" : "lightgray";
         });
 
         views2.innerHTML = localStorage.getItem(`page_view_count_${myobj2.id}`) || 0;
@@ -78,9 +78,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     product2.rate = savedRating2;
                     views2.innerHTML = product2.views;
                     vv.forEach((path, index) => {
-                        path.style.color = index < product2.averagerate / 2 ? "#FFC700" : "lightgray";
+                        path.style.color = index < product2.averagerate ? "#FFC700" : "lightgray";
                     });
-                    myrate2.innerHTML = product2.averagerate / 2;
+                    myrate2.innerHTML = product2.averagerate;
                     localStorage.setItem("myarrlike", JSON.stringify(myproducts));
                 } else {
                     ratingValue2.textContent = 0;
@@ -103,6 +103,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (productId && myproducts.length) {
         let product = myproducts.find(p => p.id == productId);
+        console.log(localStorage.getItem(`averagerate${product.id}`));
+        console.log(product.averagerate);
         views.innerHTML = localStorage.getItem(`page_view_count_${product.id}`) || 0;
         if (product) {
             objs(product, elements);
@@ -116,9 +118,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             let vv = document.querySelectorAll(".stars label svg path");
             vv.forEach((path, index) => {
-                path.style.color = index < product.averagerate / 2 ? "#FFC700" : "lightgray";
+                path.style.color = index < product.averagerate ? "#FFC700" : "lightgray";
             });
-            myrate.innerHTML = isNaN(product.averagerate) ? 0 : product.averagerate / 2;
+            myrate.innerHTML = isNaN(product.averagerate) ? 0 : product.averagerate;
 
             const savedRating = localStorage.getItem(`rate${product.id}`);
             if (savedRating) {
