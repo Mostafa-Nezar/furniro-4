@@ -29,11 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     if (myobj2) {
-        let averagerate = (localStorage.getItem(`reduced${myobj2.id}`) / localStorage.getItem(`page_rate_view_count_${myobj2.id}`)).toFixed(1);
-        myrate2.innerHTML = isNaN(averagerate) ? 0 : averagerate;
+        myrate2.innerHTML = isNaN(myobj2.averagerate) ? 0 : myobj2.averagerate;
 
         vv.forEach((path, index) => {
-            path.style.color = index < averagerate ? "#FFC700" : "lightgray";
+            path.style.color = index < myobj2.averagerate ? "#FFC700" : "lightgray";
         });
 
         views2.innerHTML = localStorage.getItem(`page_view_count_${myobj2.id}`) || 0;
@@ -70,7 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.querySelector(".dagain2").href = `../details/detail.html?id=${productId2}`;
                 document.querySelector(".addcopm2").setAttribute("data-id", product2.id);
 
-                let averagerate = (localStorage.getItem(`reduced${product2.id}`) / localStorage.getItem(`page_rate_view_count_${product2.id}`)).toFixed(1);
                 localStorage.setItem("myproduct2", JSON.stringify(product2));
                 objs(product2, elements2);
 
@@ -80,9 +78,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     product2.rate = savedRating2;
                     views2.innerHTML = product2.views;
                     vv.forEach((path, index) => {
-                        path.style.color = index < averagerate ? "#FFC700" : "lightgray";
+                        path.style.color = index < product2.averagerate ? "#FFC700" : "lightgray";
                     });
-                    myrate2.innerHTML = averagerate;
+                    myrate2.innerHTML = product2.averagerate;
                     localStorage.setItem("myarrlike", JSON.stringify(myproducts));
                 } else {
                     ratingValue2.textContent = 0;
@@ -114,14 +112,13 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".dagain").href = `../details/detail.html?id=${productId}`;
             document.querySelector(".addcopm1").setAttribute("data-id", product.id);
 
-            let averagerate = (localStorage.getItem(`reduced${product.id}`) / localStorage.getItem(`page_rate_view_count_${product.id}`)).toFixed(1);
             views.innerHTML = product.views;
 
             let vv = document.querySelectorAll(".stars label svg path");
             vv.forEach((path, index) => {
-                path.style.color = index < averagerate ? "#FFC700" : "lightgray";
+                path.style.color = index < product.averagerate ? "#FFC700" : "lightgray";
             });
-            myrate.innerHTML = isNaN(averagerate) ? 0 : averagerate;
+            myrate.innerHTML = isNaN(product.averagerate) ? 0 : product.averagerate;
 
             const savedRating = localStorage.getItem(`rate${product.id}`);
             if (savedRating) {
@@ -137,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             stars.forEach((star) => {
                 star.addEventListener('change', function () {
-                    const selectedRating = star.value; // تعديل هنا لتسجيل القيمة الصحيحة
+                    const selectedRating = star.value; 
                     ratingValue.textContent = selectedRating;
                     localStorage.setItem(`rate${product.id}`, selectedRating);
                     localStorage.setItem("myarrlike", JSON.stringify(myproducts));
