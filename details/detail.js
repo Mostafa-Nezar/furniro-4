@@ -87,10 +87,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     localStorage.setItem(`rate${product.id}`, product.rate);
                     localStorage.setItem("myarrlike",JSON.stringify(products))
                 }
+                this.location.reload()
             });
             document.getElementById("add-to-cart").setAttribute("data-id",product.id)
-            console.log(rateviews);
-            
         }
     }
 
