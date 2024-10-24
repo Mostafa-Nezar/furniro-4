@@ -103,6 +103,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (productId && myproducts.length) {
         let product = myproducts.find(p => p.id == productId);
+        console.log(localStorage.getItem(`averagerate${product.id}`));
+        console.log(product.averagerate);
         views.innerHTML = localStorage.getItem(`page_view_count_${product.id}`) || 0;
         if (product) {
             objs(product, elements);

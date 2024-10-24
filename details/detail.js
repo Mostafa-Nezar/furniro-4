@@ -1,6 +1,5 @@
 import {createproduct,myproducts,likeitem} from "../main/products.js";
 let products = JSON.parse(localStorage.getItem("myarrlike")) || myproducts
-console.log(products);
 products.forEach(e=>!e.size?e.size = "l":e.size)
 let sizes = document.querySelectorAll(".size")
 const stars = document.querySelectorAll('.stars input');
@@ -64,6 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".three img").src="../" + product.image3
             document.querySelector(".four img").src="../" + product.image4
             document.querySelector(".comp").href = `../compare/compare.html?id=${productId}`
+            document.querySelector(".comp").onclick = () =>{
+                setTimeout(() => {
+                    location.reload()
+                }, 100);
+            }
             const savedRating = localStorage.getItem(`rate${product.id}`)
             if (savedRating) {
                 ratingValue.textContent = savedRating;
@@ -92,19 +96,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     let reduced = reviews ? reviews.reduce((e, a) => e + a) : 0;
                     let averagerate  = +(reduced / rateviews).toFixed(2);
                     product.averagerate = averagerate;            
-                    localStorage.setItem(`averagerate${product.id}`, averagerate );
+                    localStorage.setItem(`averagerate${product.id}`, averagerate);
                     localStorage.setItem(`reduced${product.id}`, reduced);
                     localStorage.setItem(`rate${product.id}`, product.rate);
                     localStorage.setItem("myarrlike",JSON.stringify(products))
                 }
             });
             document.getElementById("add-to-cart").setAttribute("data-id",product.id)
-            console.log(localStorage.getItem(`averagerate${product.id}`));
-            console.log(product.averagerate);
-            
-            
         }
     }
+
     let suggestions = products
     const chunkSize = 5; 
     const startIndex = Math.floor((productId - 1) / chunkSize) * chunkSize;
