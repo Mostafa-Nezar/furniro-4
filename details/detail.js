@@ -63,10 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".three img").src="../" + product.image3
             document.querySelector(".four img").src="../" + product.image4
             document.querySelector(".comp").onclick = () =>{
-                location.reload()
+                location.reload();
                 setTimeout(() => {
-                location.assign(`../compare/compare.html?id=${productId}`)
-                }, 10);
+                    location.assign(`../compare/compare.html?id=${productId}`);
+                }, 10);                
             }
             const savedRating = localStorage.getItem(`rate${product.id}`)
             if (savedRating) {
