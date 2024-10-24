@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".comp").onclick = () =>{
                 setTimeout(() => {
                     location.reload()
-                }, 50);
+                }, 150);
             } 
 
             const savedRating = localStorage.getItem(`rate${product.id}`)
