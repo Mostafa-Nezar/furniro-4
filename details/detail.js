@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".comp").onclick = () =>{
                 setTimeout(() => {
                     location.reload()
-                }, 10);
+                }, 50);
             } 
 
             const savedRating = localStorage.getItem(`rate${product.id}`)
@@ -122,7 +122,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (cartItem) {
         document.querySelector(".q").textContent = cartItem.quantity;
         sizes.forEach((e)=>{
-            e.addEventListener("click")
+            e.addEventListener("click",()=>{
+                cartItem.size = e.innerHTML
+                console.log(cartItem);
+                localStorage.setItem("cart",JSON.stringify(cart))
+            })
         })
     }
     function updateCartQuantity(productId) {

@@ -17,7 +17,6 @@ let addtocart = (idproduct, quantity, position, price, size) => {
       let product = myArray.find(value => value.id == idproduct);
       price = product ? product.price : 0;
       size = product ? product.size : "l";
-      
       let name = product ? product.name : 'Unknown';
       cart.push({
         productid: idproduct,
