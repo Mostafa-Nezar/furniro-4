@@ -35,70 +35,64 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".three img").src="../" + product.image3
             document.querySelector(".four img").src="../" + product.image4
             let rateviewIncremented = false;
-let lastSelectedRating = null;
-let rateviews = +localStorage.getItem(`rateviews${product.id}`) || 1;
+            let lastSelectedRating = null;
+            let rateviews = +localStorage.getItem(`rateviews${product.id}`) || 0;
+            document.querySelector(".comp").href = `../compare/compare.html?id=${productId}`
+            document.querySelector(".comp").addEventListener("click", () => {
+                const keyviews = `page_view_count_${product.id}`;
+                let views = localStorage.getItem(keyviews);
+                views = (views ? parseInt(views) + 1 : 1);
+                product.views = views;
+                localStorage.setItem(keyviews, views);
+                localStorage.setItem(`rateviews${product.id}`, rateviews);
+                localStorage.setItem("myarrlike", JSON.stringify(products));
+                product.rateviews = rateviews;
+                console.log(product.views);
+                console.log(product.rateviews);
+                rateviewIncremented = false;
+                console.log(product.averagerate);
+                
+            });
 
-// Handle view and rateview on clicking the "Compare" button
-document.querySelector(".comp").addEventListener("click", () => {
-    const keyviews = `page_view_count_${product.id}`;
-    let views = localStorage.getItem(keyviews);
-    views = (views ? parseInt(views) + 1 : 1); // Increment views count or set to 1 if first time
-    product.views = views;
-    localStorage.setItem(keyviews, views);
+            const savedRating = localStorage.getItem(`rate${product.id}`);
+            if (savedRating) {
+                ratingValue.textContent = savedRating;
+                vtwo.textContent = " " + savedRating + " ";
+                product.rate = savedRating;
 
-    // Store rateviews in localStorage and update product object
-    localStorage.setItem(`rateviews${product.id}`, rateviews);
-    localStorage.setItem("myarrlike", JSON.stringify(products)); // Save updated product array
-    product.rateviews = rateviews;
-    console.log(product.views); // Debugging info
-    console.log(product.rateviews);
-});
+                stars.forEach(star => {
+                    if (star.value === savedRating) {
+                        star.checked = true;
+                    }
+                });
+            }
 
-// Load the saved rating from localStorage and update the UI
-const savedRating = localStorage.getItem(`rate${product.id}`);
-if (savedRating) {
-    ratingValue.textContent = savedRating;
-    vtwo.textContent = " " + savedRating + " ";
-    product.rate = savedRating;
+            stars.forEach((star) => {
+                star.addEventListener('change', function() {
+                    if (!rateviewIncremented) {
+                        rateviews++;
+                        localStorage.setItem(`rateviews${product.id}`, rateviews);
+                        product.rateviews = rateviews;
+                        rateviewIncremented = true;
+                    }
 
-    // Update stars UI to reflect the saved rating
-    stars.forEach(star => {
-        if (star.value === savedRating) {
-            star.checked = true;
-        }
-    });
-}
+                    lastSelectedRating = this.value;
+                    ratingValue.textContent = lastSelectedRating;
+                    vtwo.textContent = " " + lastSelectedRating + " ";
+                    product.rate = lastSelectedRating;
+                });
+            });
 
-// Handle star rating change
-stars.forEach((star) => {
-    star.addEventListener('change', function() {
-        if (!rateviewIncremented) {
-            rateviews++; // Increment rateviews once per session
-            localStorage.setItem(`rateviews${product.id}`, rateviews);
-            product.rateviews = rateviews;
-            rateviewIncremented = true;
-        }
-
-        lastSelectedRating = this.value;
-        ratingValue.textContent = lastSelectedRating;
-        vtwo.textContent = " " + lastSelectedRating + " ";
-        product.rate = lastSelectedRating;
-    });
-});
-
-// Handle actions before the user leaves the page
 window.addEventListener('beforeunload', function() {
     if (lastSelectedRating !== null) {
         let reviews = JSON.parse(localStorage.getItem(`reviews${product.id}`)) || [];
-        reviews.push(+lastSelectedRating); // Save the current rating
+        reviews.push(+lastSelectedRating);
         localStorage.setItem(`reviews${product.id}`, JSON.stringify(reviews));
 
-        // Calculate average rating
         let total = reviews.reduce((sum, rating) => sum + rating, 0);
-        let averagerate = +(total / rateviews).toFixed(2); // Calculate average based on rateviews
+        let averagerate = +(total / (rateviews == 0 ? 1 : rateviews)).toFixed(2);
         product.averagerate = averagerate;
-
-        // Save data in localStorage
+        localStorage.setItem(`total${product.id}`,product.averagerate)
         localStorage.setItem(`rate${product.id}`, product.rate);
         localStorage.setItem("myarrlike", JSON.stringify(products));
     }
