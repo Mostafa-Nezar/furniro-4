@@ -21,17 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (e.innerHTML == product.size) {
                     e.classList.add("active")
                 }
-            })
-            const keyviews = `page_view_count_${product.id}`;
-            let views = localStorage.getItem(keyviews);
-            let rateviews = +localStorage.getItem(`rateviews${product.id}`)
-            views = (views ? parseInt(views) + 1 : 1);
-            localStorage.setItem(keyviews, views);
-            let rateviewIncremented = false;  
-            localStorage.setItem(keyviews, views);            
-                product.rateviews = rateviews;                
-                product.views = views;
-            localStorage.setItem("myarrlike", JSON.stringify(products))            
+            })          
             document.getElementById("light").innerHTML = product.name;
             document.getElementById("product-image").src = "../" + product.image;
             document.querySelector(".key").innerHTML=product.key
@@ -45,9 +35,13 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".three img").src="../" + product.image3
             document.querySelector(".four img").src="../" + product.image4
             document.querySelector(".comp").onclick = () =>{
-                setTimeout(() => {
-                    location.assign(`../compare/compare.html?id=${productId}`);
-                }, 10);                
+                const keyviews = `page_view_count_${product.id}`;
+                let views = localStorage.getItem(keyviews);
+                views = (views ? parseInt(views) + 1 : 1);                
+                product.views = views;
+                localStorage.setItem(keyviews, views);
+                console.log(product.views);
+                
             }
             const savedRating = localStorage.getItem(`rate${product.id}`)
             if (savedRating) {
@@ -60,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 });
             }
+            let rateviewIncremented = false;           
             let lastSelectedRating = null;
             stars.forEach((star) => {
                 star.addEventListener('change', function() {
@@ -67,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         rateviews++;  
                         localStorage.setItem(`rateviews${product.id}`,rateviews)
                         rateviewIncremented = true;
+                        product.rateviews = rateviews;                
                     }
                     lastSelectedRating = this.value;
                     ratingValue.textContent = lastSelectedRating;
@@ -77,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
             window.addEventListener('beforeunload', function() {
                 if (lastSelectedRating !== null) {
                     let reviews = JSON.parse(localStorage.getItem(`reviews${product.id}`)) || [];
+                    let rateviews = +localStorage.getItem(`rateviews${product.id}`) || 1
                     reviews.push(+lastSelectedRating);
                     localStorage.setItem(`reviews${product.id}`, JSON.stringify(reviews));
                     let reduced = reviews ? reviews.reduce((e, a) => e + a) : 0;
@@ -89,7 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("add-to-cart").setAttribute("data-id",product.id)
         }
     }
-
     let suggestions = products
     const chunkSize = 5; 
     const startIndex = Math.floor((productId - 1) / chunkSize) * chunkSize;
