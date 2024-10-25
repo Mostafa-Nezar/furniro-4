@@ -35,15 +35,15 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".three img").src="../" + product.image3
             document.querySelector(".four img").src="../" + product.image4
             document.querySelector(".comp").href = `../compare/compare.html?id=${productId}`
-            document.querySelector(".comp").onclick = () =>{
+            document.querySelector(".comp").addEventListener("click",() =>{
                 const keyviews = `page_view_count_${product.id}`;
                 let views = localStorage.getItem(keyviews);
                 views = (views ? parseInt(views) + 1 : 1);                
                 product.views = views;
                 localStorage.setItem(keyviews, views);
+                localStorage.setItem("myarrlike",JSON.stringify(products))
                 console.log(product.views);
-                
-            }
+            }) 
             const savedRating = localStorage.getItem(`rate${product.id}`)
             if (savedRating) {
                 ratingValue.textContent = savedRating;
