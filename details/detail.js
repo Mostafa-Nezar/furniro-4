@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".two img").src="../" + product.image2
             document.querySelector(".three img").src="../" + product.image3
             document.querySelector(".four img").src="../" + product.image4
+            document.querySelector(".comp").href = `../compare/compare.html?id=${productId}`
             document.querySelector(".comp").onclick = () =>{
                 const keyviews = `page_view_count_${product.id}`;
                 let views = localStorage.getItem(keyviews);
