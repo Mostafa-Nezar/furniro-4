@@ -35,17 +35,16 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".three img").src="../" + product.image3
             document.querySelector(".four img").src="../" + product.image4
             const keyviews = `page_view_count_${product.id}`;
-            let views = localStorage.getItem(keyviews);
+            let views = localStorage.getItem(keyviews) ;
             views = (views ? parseInt(views) + 1 : 1);
             product.views = views;
-            
             let rateviewIncremented = false;
             let lastSelectedRating = null;
-            let previousRating = null; // المتغير الجديد لتخزين التقييم السابق
             let rateviews = +localStorage.getItem(`rateviews${product.id}`) || 0;
             let totalRatingValue = parseFloat(localStorage.getItem(`totalRatingValue_${product.id}`)) || 0;
             product.averagerate = parseFloat(localStorage.getItem(`averagerate${product.id}`)) || 0;
-            document.querySelector(".comp").href = `../compare/compare.html?id=${productId}`;
+            
+            document.querySelector(".comp").href = `../compare/compare.html?id=${productId}`
             document.querySelector(".comp").addEventListener("click", () => {
                 const keyviews = `page_view_count_${product.id}`;
                 let views = localStorage.getItem(keyviews);
@@ -79,15 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Update rating and average rating when a star is selected
             stars.forEach((star) => {
                 star.addEventListener('change', function() {
-                    // طرح التقييم السابق من المجموع الكلي إذا لم يكن null
-                    if (previousRating !== null) {
-                        totalRatingValue -= previousRating;
-                    }
-                    
-                    // تحديث المتغيرات
                     lastSelectedRating = parseFloat(this.value);
-                    previousRating = lastSelectedRating; // تحديث previousRating بالتقييم الجديد
-            
                     if (!rateviewIncremented) {
                         rateviews++;
                         localStorage.setItem(`rateviews${product.id}`, rateviews);
@@ -95,25 +86,24 @@ document.addEventListener("DOMContentLoaded", () => {
                         rateviewIncremented = true;
                     }
             
-                    // إضافة التقييم الجديد إلى المجموع الكلي
+                    // Update total rating and calculate average
                     totalRatingValue += lastSelectedRating;
                     product.averagerate = (totalRatingValue / rateviews).toFixed(1);
             
-                    // تحديث قيم التقييم في localStorage
+                    // Update localStorage with new rating values
                     localStorage.setItem(`rate${product.id}`, lastSelectedRating);
                     localStorage.setItem(`totalRatingValue_${product.id}`, totalRatingValue);
                     localStorage.setItem(`averagerate${product.id}`, product.averagerate);
             
-                    // تحديث الواجهة بالتقييم الجديد
+                    // Update UI with new rating
                     ratingValue.textContent = lastSelectedRating;
                     vtwo.textContent = " " + lastSelectedRating + " ";
                     product.rate = lastSelectedRating;
-            
-                    // طباعة القيم للتأكد
+                    
+                    // Log to verify values
                     console.log("Average Rate:", product.averagerate);
                 });
             });
-            
             
 
             document.getElementById("add-to-cart").setAttribute("data-id",product.id)
