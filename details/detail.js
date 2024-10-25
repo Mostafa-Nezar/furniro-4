@@ -41,62 +41,70 @@ document.addEventListener("DOMContentLoaded", () => {
             let rateviewIncremented = false;
             let lastSelectedRating = null;
             let rateviews = +localStorage.getItem(`rateviews${product.id}`) || 0;
+            let totalRatingValue = parseFloat(localStorage.getItem(`totalRatingValue_${product.id}`)) || 0;
+            product.averagerate = parseFloat(localStorage.getItem(`averagerate${product.id}`)) || 0;
+            
             document.querySelector(".comp").href = `../compare/compare.html?id=${productId}`
             document.querySelector(".comp").addEventListener("click", () => {
+                const keyviews = `page_view_count_${product.id}`;
+                let views = localStorage.getItem(keyviews);
+                views = (views ? parseInt(views) + 1 : 1);
+                product.views = views;
                 localStorage.setItem(keyviews, views);
                 localStorage.setItem(`rateviews${product.id}`, rateviews);
                 localStorage.setItem("myarrlike", JSON.stringify(products));
                 product.rateviews = rateviews;
+                rateviewIncremented = false;
+            
                 console.log(product.views);
                 console.log(product.rateviews);
-                rateviewIncremented = false;
                 console.log(product.averagerate);
-                
             });
-
+            
+            // Load saved rating if it exists
             const savedRating = localStorage.getItem(`rate${product.id}`);
             if (savedRating) {
                 ratingValue.textContent = savedRating;
                 vtwo.textContent = " " + savedRating + " ";
                 product.rate = savedRating;
-
+            
                 stars.forEach(star => {
                     if (star.value === savedRating) {
                         star.checked = true;
                     }
                 });
             }
-
+            
+            // Update rating and average rating when a star is selected
             stars.forEach((star) => {
                 star.addEventListener('change', function() {
+                    lastSelectedRating = parseFloat(this.value);
                     if (!rateviewIncremented) {
                         rateviews++;
                         localStorage.setItem(`rateviews${product.id}`, rateviews);
                         product.rateviews = rateviews;
                         rateviewIncremented = true;
                     }
-
-                    lastSelectedRating = this.value;
+            
+                    // Update total rating and calculate average
+                    totalRatingValue += lastSelectedRating;
+                    product.averagerate = (totalRatingValue / rateviews).toFixed(1);
+            
+                    // Update localStorage with new rating values
+                    localStorage.setItem(`rate${product.id}`, lastSelectedRating);
+                    localStorage.setItem(`totalRatingValue_${product.id}`, totalRatingValue);
+                    localStorage.setItem(`averagerate${product.id}`, product.averagerate);
+            
+                    // Update UI with new rating
                     ratingValue.textContent = lastSelectedRating;
                     vtwo.textContent = " " + lastSelectedRating + " ";
                     product.rate = lastSelectedRating;
+                    
+                    // Log to verify values
+                    console.log("Average Rate:", product.averagerate);
                 });
             });
-
-window.addEventListener('beforeunload', function() {
-    if (lastSelectedRating !== null) {
-        let reviews = JSON.parse(localStorage.getItem(`reviews${product.id}`)) || [];
-        reviews.push(+lastSelectedRating);
-        localStorage.setItem(`reviews${product.id}`, JSON.stringify(reviews));
-
-        let total = reviews.reduce((sum, rating) => sum + rating, 0);
-        let averagerate = +(total / (rateviews == 0 ? 1 : rateviews)).toFixed(2);
-        product.averagerate = averagerate;
-        localStorage.setItem(`total${product.id}`,product.averagerate)
-        localStorage.setItem(`rate${product.id}`, product.rate);
-        localStorage.setItem("myarrlike", JSON.stringify(products));
-    }
-});
+            
 
             document.getElementById("add-to-cart").setAttribute("data-id",product.id)
         }
