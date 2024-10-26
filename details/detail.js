@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let totalRatingValue = parseFloat(localStorage.getItem(`totalRatingValue_${product.id}`)) || 0;
             product.averagerate = parseFloat(localStorage.getItem(`averagerate${product.id}`)) || 0;
             
-            // document.querySelector(".comp").href = `../compare/compare.html?id=${productId}`
+            document.querySelector(".comp").href = `../compare/compare.html?id=${productId}`
             document.querySelector(".comp").addEventListener("click", () => {
                 const keyviews = `page_view_count_${product.id}`;
                 let views = localStorage.getItem(keyviews);
