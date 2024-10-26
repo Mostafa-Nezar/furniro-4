@@ -44,18 +44,17 @@ document.addEventListener("DOMContentLoaded", () => {
             let totalRatingValue = parseFloat(localStorage.getItem(`totalRatingValue_${product.id}`)) || 0;
             product.averagerate = parseFloat(localStorage.getItem(`averagerate${product.id}`)) || 0;
             
-            document.querySelector(".comp").href = `../compare/compare.html?id=${productId}`
+            // document.querySelector(".comp").href = `../compare/compare.html?id=${productId}`
             document.querySelector(".comp").addEventListener("click", () => {
                 const keyviews = `page_view_count_${product.id}`;
                 let views = localStorage.getItem(keyviews);
                 views = (views ? parseInt(views) + 1 : 1);
                 product.views = views;
+                product.rateviews = rateviews;
                 localStorage.setItem(keyviews, views);
                 localStorage.setItem(`rateviews${product.id}`, rateviews);
                 localStorage.setItem("myarrlike", JSON.stringify(products));
-                product.rateviews = rateviews;
                 rateviewIncremented = false;
-            
                 console.log(product.views);
                 console.log(product.rateviews);
                 console.log(product.averagerate);
