@@ -349,7 +349,10 @@ border-bottom: black 3px solid;
 .red{
    color: var(--redcolor) !important;
 }
-
+.rot{
+    transform:rotate(90deg);
+    transition: 0.5s;
+}
 .hover-red:hover svg {
     fill: var(--primary);
 }

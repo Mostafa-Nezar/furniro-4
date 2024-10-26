@@ -61,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.log(product.averagerate);
             });
             
-            // Load saved rating if it exists
             const savedRating = localStorage.getItem(`rate${product.id}`);
             if (savedRating) {
                 ratingValue.textContent = savedRating;
@@ -74,37 +73,23 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 });
             }
-            
-            // Update rating and average rating when a star is selected
             stars.forEach((star) => {
                 star.addEventListener('change', function() {
+                    rateviews++;
+                    product.rateviews = rateviews;
+                    localStorage.setItem(`rateviews${product.id}`, rateviews);
                     lastSelectedRating = parseFloat(this.value);
-                    if (!rateviewIncremented) {
-                        rateviews++;
-                        localStorage.setItem(`rateviews${product.id}`, rateviews);
-                        product.rateviews = rateviews;
-                        rateviewIncremented = true;
-                    }
-            
-                    // Update total rating and calculate average
                     totalRatingValue += lastSelectedRating;
                     product.averagerate = (totalRatingValue / rateviews).toFixed(1);
-            
-                    // Update localStorage with new rating values
                     localStorage.setItem(`rate${product.id}`, lastSelectedRating);
                     localStorage.setItem(`totalRatingValue_${product.id}`, totalRatingValue);
                     localStorage.setItem(`averagerate${product.id}`, product.averagerate);
-            
-                    // Update UI with new rating
                     ratingValue.textContent = lastSelectedRating;
                     vtwo.textContent = " " + lastSelectedRating + " ";
                     product.rate = lastSelectedRating;
-                    
-                    // Log to verify values
                     console.log("Average Rate:", product.averagerate);
                 });
             });
-            
 
             document.getElementById("add-to-cart").setAttribute("data-id",product.id)
         }

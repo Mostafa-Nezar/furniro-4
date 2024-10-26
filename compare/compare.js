@@ -36,11 +36,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         views2.innerHTML = localStorage.getItem(`page_view_count_${myobj2.id}`) || 0;
-        document.getElementById("product-imagee").src = "../" + myobj2.imagetwo;
+        document.getElementById("product-imagee").src = "../" + myobj2.image;
         document.getElementById("product-imagee").style.height = '177px';
         document.querySelector(".name2").innerHTML = myobj2.name;
         document.querySelector(".price2").innerHTML = `Rs ${myobj2.price},000.00`;
         document.querySelector(".dagain2").href = `../details/detail.html?id=${myobj2.id}`;
+        
         document.querySelector(".addcopm2").setAttribute("data-id", myobj2.id);
         objs(myobj2, elements2);
     }
@@ -62,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const product2 = myproducts.find(p => p.id == productId2);
 
             if (product2) {
-                document.getElementById("product-imagee").src = "../" + product2.imagetwo;
+                document.getElementById("product-imagee").src = "../" + product2.image;
                 document.getElementById("product-imagee").style.height = '177px';
                 document.querySelector(".name2").innerHTML = product2.name;
                 document.querySelector(".price2").innerHTML = `Rs ${product2.price},000.00`;
@@ -108,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
         views.innerHTML = localStorage.getItem(`page_view_count_${product.id}`) || 0;
         if (product) {
             objs(product, elements);
-            document.getElementById("product-image").src = "../" + product.imagetwo;
+            document.getElementById("product-image").src = "../" + product.image;
             document.querySelector(".name").innerHTML = product.name;
             document.querySelector(".price").innerHTML = `Rs ${product.price},000.00`;
             document.querySelector(".dagain").href = `../details/detail.html?id=${productId}`;
@@ -147,11 +148,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelector("#proudctsname").onclick = () => {
         document.querySelector("#item-list").classList.toggle("d-none");
+        document.querySelector(".psedo").classList.toggle("d-none");
     };
 
     document.querySelector("*").addEventListener("click", (e) => {
         if (e.target.id !== "proudctsname" && e.target.id !== "myli") {
             document.querySelector("#item-list").classList.add("d-none");
+            document.querySelector(".psedo").classList.add("d-none");
         }
     });
 });

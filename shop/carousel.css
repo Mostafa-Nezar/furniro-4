@@ -150,10 +150,6 @@
     background-color: var(--gray);
 }
 
-.rot{
-    transform:rotate(90deg);
-    transition: 0.5s;
-}
 
 .myfilter{
     cursor: pointer;
