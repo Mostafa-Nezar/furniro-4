@@ -86,6 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     ratingValue.textContent = lastSelectedRating;
                     vtwo.textContent = " " + lastSelectedRating + " ";
                     product.rate = lastSelectedRating;
+                    localStorage.setItem("myarrlike", JSON.stringify(products));
                     console.log("Average Rate:", product.averagerate);
                 });
             });
