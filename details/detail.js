@@ -34,11 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".two img").src="../" + product.image2
             document.querySelector(".three img").src="../" + product.image3
             document.querySelector(".four img").src="../" + product.image4
-            const keyviews = `page_view_count_${product.id}`;
-            let views = localStorage.getItem(keyviews) ;
-            views = (views ? parseInt(views) + 1 : 1);
-            product.views = views;
-            let rateviewIncremented = false;
             let lastSelectedRating = null;
             let rateviews = +localStorage.getItem(`rateviews${product.id}`) || 0;
             let totalRatingValue = parseFloat(localStorage.getItem(`totalRatingValue_${product.id}`)) || 0;
@@ -54,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 localStorage.setItem(keyviews, views);
                 localStorage.setItem(`rateviews${product.id}`, rateviews);
                 localStorage.setItem("myarrlike", JSON.stringify(products));
-                rateviewIncremented = false;
                 console.log(product.views);
                 console.log(product.rateviews);
                 console.log(product.averagerate);
