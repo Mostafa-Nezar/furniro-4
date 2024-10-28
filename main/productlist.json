@@ -37,10 +37,10 @@
 "notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
 },
 "image":"images/Images.png",
-"image1":"images/sm1.png",
-"image2":"images/Images.png",
-"image3":"images/sm3.png",
-"image4":"images/sm4.png",
+"image1":"images/Images.png",
+"image2":"images/Images2.png",
+"image3":"images/Images3.png",
+"image4":"images/lamp.png",
 "sale":30
 },
 {"id":2,
@@ -81,10 +81,10 @@
 "notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
 },
 "image":"images/image2.png",
-"image1":"images/kit.png",
-"image2":"images/kit.png",
-"image3":"images/image2.png",
-"image4":"images/sm4.png"
+"image1":"images/Images.png",
+"image2":"images/Images2.png",
+"image3":"images/Images3.png",
+"image4":"images/lamp.png"
 },
 {"id":3, 
 "key":"hello",
@@ -124,10 +124,10 @@
 "notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
 },
 "image":"images/Images2.png",
-"image1":"images/sm1.png",
-"image2":"images/sm2.png",
-"image3":"images/sm3.png",
-"image4":"images/sm4.png",
+"image1":"images/Images.png",
+"image2":"images/Images2.png",
+"image3":"images/Images3.png",
+"image4":"images/lamp.png",
 "sale" : 50
 },
 {"id":4,
@@ -167,10 +167,10 @@
 "notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
 },
 "image":"images/Images3.png",
-"image1":"images/kit.png",
-"image2":"images/kit.png",
-"image3":"images/sm3.png",
-"image4":"images/sm4.png",
+"image1":"images/Images.png",
+"image2":"images/Images2.png",
+"image3":"images/Images3.png",
+"image4":"images/lamp.png",
 "sale" : 50,
 "new" : "New"
 
@@ -212,10 +212,10 @@
 "notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
 },
 "image":"images/lamp.png",
-"image1":"images/sm1.png",
-"image2":"images/sm2.png",
-"image3":"images/sm3.png",
-"image4":"images/sm4.png"
+"image1":"images/Images.png",
+"image2":"images/Images2.png",
+"image3":"images/Images3.png",
+"image4":"images/lamp.png"
 },
 {"id":6,
 "key":"hello",
@@ -254,10 +254,10 @@
 "notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
 },
 "image":"images/image6.png",
-"image1":"images/kit.png",
-"image2":"images/kit.png",
-"image3":"images/sm3.png",
-"image4":"images/sm4.png",
+"image1":"images/bedroom.png",
+"image2":"images/image7.png",
+"image3":"images/image8.png",
+"image4":"images/image6.png",
 "new":"New"
 
 },
@@ -299,10 +299,10 @@
 "notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
 },
 "image":"images/image7.png",
-"image1":"images/sm1.png",
-"image2":"images/sm2.png",
-"image3":"images/sm3.png",
-"image4":"images/sm4.png",
+"image1":"images/bedroom.png",
+"image2":"images/image7.png",
+"image3":"images/image8.png",
+"image4":"images/image6.png",
 "sale":50
 },
 {"id":8,
@@ -342,10 +342,10 @@
 "notcovered":"The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."
 },
 "image":"images/image8.png",
-"image1":"images/kit.png",
-"image2":"images/kit.png",
-"image3":"images/sm3.png",
-"image4":"images/sm4.png",
+"image1":"images/bedroom.png",
+"image2":"images/image7.png",
+"image3":"images/image8.png",
+"image4":"images/image6.png",
 "new":"New"
 },
 {"id":9, 
