@@ -21,6 +21,7 @@ document.addEventListener("click", (e) => {
     }
     if (target.closest(".sort")) {
         toggleDropdown(".myullet");
+        document.querySelector(".sort .myfilter").classList.toggle("rot")
     }
     if (!target.classList.contains("myfilter")) {
         document.querySelector(".mydivlist").classList.add("d-none");
